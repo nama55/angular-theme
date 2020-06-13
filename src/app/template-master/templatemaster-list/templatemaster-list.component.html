@@ -1,0 +1,79 @@
+<div class="chat-w" id="templateMasterComponent">
+  <div class="silk-form-wizard" style="box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);">
+
+    <div class="d-flex justify-content-between bg-primary pb-1 pt-1 pl-1 pr-1 ">
+      <!-- For MiniHeading--->
+      <h6 class="ml-2 mt-1"><i class="fa fa-calendar mr-1 mt-1"></i>Template Master</h6>
+      <div class="">
+        <div class="btn-panel btn-panel-msg">
+          <a href="" class="btn  send-message-btn" role="button"><i class="fa fa-gears fa-lg"></i></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="pl-3 pb-3 pr-3 bg-white"> <!--pt-3-->
+      <div>
+        <div class="d-flex justify-content-between form-group-style pb-1 pt-2">
+
+          <div class="">
+            <button type="button" class="btn btn-outline-primary" [routerLink]="['/business/templatemaster-Add',0]"><span class="fa fa-calendar-plus-o"></span> Add Template</button>
+          </div>
+        </div>
+        <div class="d-flex justify-content-between bg-primary pb-1 pt-2">
+          <div class="btn-panel btn-panel-conversation">
+            <h6 class="ml-3 mt-1"><i class="fa fa-address-card-o mr-1 mt-1"></i>Template Master- Edit/Delete</h6>
+          </div>
+          <!--<div class="">
+        <div class="btn-panel btn-panel-msg">
+          <button class="btn btn-sm btn-info mr-1"><span class="fa fa-user-plus"></span> Add</button>
+        </div>
+      </div>-->
+        </div>
+        <table class="table">
+          <thead style="border: 1px solid #CDCDCD; background-color:#F1F1F1">
+            <tr>
+              <th style="border: 1px solid #CDCDCD">TM ID</th>
+              <th style="border: 1px solid #CDCDCD">TM Name</th>
+              <th style="border: 1px solid #CDCDCD">TM Purpose</th>
+              <th style="border: 1px solid #CDCDCD">App ID</th>
+              <th style="border: 1px solid #CDCDCD">CH ID</th>
+              <th style="border: 1px solid #CDCDCD">TM Status</th>
+              <th style="border: 1px solid #CDCDCD">TM Details</th>
+              <th colspan="3" style="border: 1px solid #CDCDCD">Actions</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let templateMaster of templateMasterdata | pagination: paginationArgs(); index as i" >
+              <td style="border: 1px solid #CDCDCD">{{templateMaster.templateid}}</td>
+              <td style="border: 1px solid #CDCDCD">{{templateMaster.templatename}}</td>
+              <td style="border: 1px solid #CDCDCD">{{templateMaster.templatepurpose}}</td>
+              <td style="border: 1px solid #CDCDCD">{{templateMaster.application}}</td>
+              <td style="border: 1px solid #CDCDCD">{{templateMaster.channelid}}</td>
+              <td style="border: 1px solid #CDCDCD">{{templateMaster.templatestatus}}</td>
+              <td style="border: 1px solid #CDCDCD">
+                <button class="btn btn-info" (click)="showDialog = !showDialog;popuopenvalue(i)"><span class="fa fa-info "></span></button>
+                <app-details-popup [(visible)]="showDialog" [(headerOfDetailsPopup)]=PopupheaderName [(bodyDataDetailsPopup)]=detailsObjectsOfTable></app-details-popup>
+              </td>
+              <td colspan="3" style="border: 1px solid #ddd">
+                <button class="btn btn-info" [routerLink]="['/business/templatemaster-Add',templateMaster.templateid]"><span class="fa fa-edit "></span></button>
+                <button class="btn btn-danger" (click)="deleteTemplate(templateMaster.templateid)" ><span class="fa fa-trash"></span></button>
+              </td>
+            </tr>
+         
+          </tbody>
+
+          
+        </table>
+        <ng-pagination [totalItems]="totalItems"
+              [currentPage]="currentPage"
+              [pageSize]="pageSize"
+              (pageChange)="onPageChange($event)"
+              previous-text="&lsaquo;"
+              next-text="&rsaquo;"
+              first-text="First"
+              last-text="Last">
+        </ng-pagination>
+      </div>
+    </div>
+  </div>
+</div>

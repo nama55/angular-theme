@@ -1,0 +1,134 @@
+<div class="chat-w" id="srcProviderComponent">
+  <div class="silk-form-wizard" style="box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);">
+
+    <div class="d-flex justify-content-between bg-primary pb-1 pt-1 pl-1 pr-1 ">
+      <!-- For MiniHeading--->
+      <h6 class="ml-2 mt-1"><i class="fa fa-user-plus mr-1 mt-1"></i>Channel Master</h6>
+      <div class="">
+        <div class="btn-panel btn-panel-msg">
+          <a href="" class="btn  send-message-btn" role="button"><i class="fa fa-gears fa-lg"></i></a>
+        </div>
+      </div>
+    </div>
+
+    <!------>
+    <div class="pl-3 pt-3 pb-3 pr-3 bg-white">
+      <div>
+        <div class="d-flex justify-content-between bg-primary pb-1 pt-2 pl-2 pr-2">
+          <div class="btn-panel btn-panel-conversation">
+            <h6 class="ml-1 mt-1"><i class="fa fa-address-card-o mr-1 mt-1"></i>{{channelMasterFormLabelName}}</h6>
+          </div>
+
+        </div>
+        <form [formGroup]="channelMasterForm" autocomplete="off" novalidate (ngSubmit)="createChannel(channelMasterForm.value)">
+          <div>
+            <div class="form-group-style">
+              
+
+              <div class="row">
+
+                <div class="col-md-6">
+                  <label for="staticEmail" class="col-form-label font-weight-bold">Channel ID</label>
+
+                  <input type="text" readonly class="form-control-plaintext" id="ChannelMSTID" formControlName="channelMSTID">
+
+                </div>
+                <div class=" col-md-6">
+                  <label class="font-weight-bold">Channel Name</label>
+                  <div class="input-group">
+                    <span class="input-group-addon"><i class="glyphicon glyphicon-grain"></i></span>
+                    <input type="text" class="form-control" placeholder="Channel Name" formControlName="channelMSTName" id="channelMSTName" name="name" required>
+                  </div>
+                  <div class="input-group">
+                    <em style="color:red" *ngIf="validateControl('channelMSTName') && hasError('channelMSTName', 'required');else ErrorChannelMasterFormForBlankSpace">Channel Name is required</em>
+                    <em style="color:red" *ngIf="validateControl('channelMSTName') && hasError('channelMSTName', 'maxlength')">Maximum allowed length is 20 characters.</em>
+                  </div>
+                </div>
+                <!-- <div class="col-md-6">
+                  <label class="font-weight-bold">Channel Type</label>
+                  <select name="ChannelMSTType" id="ChannelMSTType" class="form-control">
+                    <option value="0">Select</option>
+                    <option value="1">SMS</option>
+                    <option value="2">E-Mail</option>
+                    <option value="3">Push</option>
+                  </select>
+                </div> -->
+                
+              </div>
+            </div>
+            <div class="form-group-style">
+              <div class="row">
+
+                <div class="col-md-6">
+                  <label for="staticEmail" class="col-form-label font-weight-bold">Channel Status – Active, Inactive</label>
+                  <div class="input-group">
+                    <!-- Group of default radios - option 1 -->
+                    <div class="custom-control custom-radio">
+                      <input type="radio" class="custom-control-input"  formControlName="channelMSTStatus" id="channelMSTStatusActive" name="channelMSTStatus" value=1>
+                      <label class="custom-control-label" for="channelMSTStatusActive">Active</label>
+                    </div>
+
+                    <!-- Group of default radios - option 2 -->
+                    <div class="custom-control custom-radio">
+                      <input type="radio" class="custom-control-input" formControlName="channelMSTStatus" id="channelMSTStatusInActive" name="channelMSTStatus" value=0>
+                      <label class="custom-control-label" for="channelMSTStatusInActive">Inactive</label>
+                    </div>
+                    </div>
+                    <!--<label class="mr-2">Active</label><span class="btn btn-sm btn-default "><input type="checkbox" name="channelStatus" id="chStatusActive" /></span>-->
+                    <!--<label class="mr-2">Inactive</label><span class="btn btn-sm btn-default "><input type="checkbox" name="channelStatus" id="chStatusInActive" /></span>-->
+
+                  </div>
+                  <div class="col-md-6">
+                    <label class="font-weight-bold">Max Retry Attempts</label>
+                    <div class="input-group">
+                      <span class="input-group-addon"><i class="glyphicon glyphicon-link"></i></span>
+                      <input type="text" class="form-control" placeholder="Max Retry Attempts" formControlName="channelMSTMaxRty" id="channelMSTMaxRty" name="channelMSTMaxRty" required>
+                    </div>
+                    <div class="input-group">
+                      <em style="color:red" *ngIf="validateControl('channelMSTMaxRty') && hasError('channelMSTMaxRty', 'required');else ErrorChannelMasterFormForBlankSpace">Max Retry Attempts is required</em>
+                    </div>
+                  </div>
+
+
+                </div>
+            </div>
+            <div class="form-group-style">
+              <div class="row">
+
+                <div class="col-md-6">
+                  <label class="font-weight-bold">Time delay between retries – max</label>
+                  <div class="input-group">
+                    <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                    <input type="text" class="form-control" placeholder="Time delay between retries – max" formControlName="channelMSTTimeDelaySec" id="channelMSTTimeDelaySec" name="channelMSTTimeDelaySec" required>sec
+                  </div>
+                  <div class="input-group">
+                    <em style="color:red" *ngIf="validateControl('channelMSTTimeDelaySec') && hasError('channelMSTTimeDelaySec', 'required');else ErrorServiErrorChannelMasterFormForBlankSpaceceProviderForBlankSpace">Channel Delay is required</em>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <label class="font-weight-bold">Action to be taken for failed messages</label>
+                  <div class="input-group">
+                    <span class="input-group-addon"><i class="glyphicon glyphicon-phone"></i></span>
+                    <input type="text" class="form-control" placeholder="Action to be taken for failed messages" formControlName="channelMSTActionFailsMsg" id="channelMSTActionFailsMsg" name="channelMSTActionFailsMsg" required>
+                  </div>
+                  <div class="input-group">
+                    <em style="color:red" *ngIf="validateControl('channelMSTActionFailsMsg') && hasError('channelMSTActionFailsMsg', 'required');else ErrorServiErrorChannelMasterFormForBlankSpaceceProviderForBlankSpace">Action Taken is required</em>
+                  </div>
+                </div>
+                
+              </div>
+            </div>
+
+            <div class="btn-panel btn-panel-msg mr-1" style="margin-top:2%;">
+              <button type="submit" class="btn btn-sm btn-success mr-1" [disabled]="!channelMasterForm.valid"><span class="glyphicon glyphicon-floppy-save"></span> Create</button>
+              <button type="reset" class="btn btn-sm btn-warning mr-1"><span class="glyphicon glyphicon-refresh"></span> Reset</button>
+              <button class="btn btn-sm btn-danger mr-1" [routerLink]="['/business/channel-master']"><span class="glyphicon glyphicon-remove"></span> Cancel</button>
+            </div>
+          </div>
+
+          <ng-template #ErrorChannelMasterFormForBlankSpace>&nbsp;</ng-template>
+        </form>
+      </div>
+    </div>
+  </div>
+

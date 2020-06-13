@@ -1,0 +1,18 @@
+<div [@dialog] *ngIf="visible" class="dialog">
+  <div class="modal-header modal-header-primary">
+    <button *ngIf="closable" (click)="close()" aria-label="Close" class="dialog__close-btn" style="cursor: pointer;">X</button>
+    <h4><i class="fa fa-bar-chart-o"></i> {{headerOfDetailsPopup}}</h4>
+  </div>
+  <div class="modal-body">
+    <ng-content></ng-content>
+    <dl class="row" *ngFor="let bodyData of bodyDataDetailsPopup">
+      <dt class="col-sm-6">{{bodyData.key}} :</dt>
+      <dd class="col-sm-6">{{bodyData.value}} </dd>
+    </dl>
+  </div>
+  <div class="modal-footer">
+    <button (click)="close()" type="button" class="btn btn-secondary pull-left" data-dismiss="modal">Close</button>
+
+  </div>
+</div>
+<div *ngIf="visible" class="overlay"></div>

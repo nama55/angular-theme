@@ -1,0 +1,1698 @@
+<!--<p>
+  service-provider works!
+</p>-->
+<div class="chat-w">
+  <div class="silk-form-wizard" style="box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);">
+
+    <div class="d-flex justify-content-between bg-primary pb-1 pt-1 pl-1 pr-1 mb-1">
+      <!-- For MiniHeading--->
+      <h6 class="ml-2 mt-1"><i class="fa fa-user-plus mr-1 mt-1"></i>Service Provider</h6>
+      <div class="">
+        <div class="btn-panel btn-panel-msg">
+          <a href="" class="btn  send-message-btn" role="button"><i class="fa fa-gears fa-lg"></i></a>
+        </div>
+      </div>
+    </div>
+
+    <!------>
+    <div class="pl-3 pt-3 pb-3 pr-3 bg-white">
+      <div class="d-flex justify-content-between bg-primary pb-1 pt-2 pl-2 pr-2">
+        <div class="btn-panel btn-panel-conversation">
+          <h6 class="ml-1 mt-1"><i class="fa fa-user-plus mr-1 mt-1"></i>Customer Pesonal Information</h6>
+        </div>
+        <div class="">
+          <div class="btn-panel btn-panel-msg">
+            <button class="btn btn-sm btn-info mr-1"><span class="fa fa-user-plus"></span> Add</button>
+            <button class="btn btn-sm btn-warning mr-1"><span class="fa fa-refresh"></span> Reset</button>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="form-group-style" style="border-top:1px solid #ddd">
+          <div class="row">
+            <div class=" col-md-3">
+              <label>Form Number</label>
+              <input type="text" class="form-control" placeholder="Enter Form Number">
+            </div>
+            <div class="col-md-3">
+              <label>Business Unit Name</label>
+              <select class="form-control">
+                <option>Select</option>
+                <option>Investment Services</option>
+                <option>Institutional Equity</option>
+                <option>Wealth Management</option>
+              </select>
+            </div>
+            <div class="col-md-3">
+              <label>Sub Business Unit Name</label>
+              <select class="form-control">
+                <option>Select</option>
+                <option>Investment Services</option>
+                <option>Institutional Equity</option>
+                <option>Wealth Management</option>
+              </select>
+            </div>
+            <div class="col-md-3">
+              <label>Product Name</label>
+              <select class="form-control">
+                <option>Select</option>
+                <option>DP</option>
+                <option>BO</option>
+                <option>INS</option>
+                <option>MF</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <div class="form-group-style">
+          <div class="row">
+            <div class="col-md-3">
+              <label>AADHAR Number</label>
+              <input type="text" class="form-control" placeholder="Enter Form Number" required="">
+            </div>
+            <div class=" col-md-3">
+              <label>KYC Number</label>
+              <input type="text" class="form-control" placeholder="Enter KYC Number" required="">
+            </div>
+            <div class="col-md-3">
+              <label>GST (If Any)</label>
+              <input type="text" class="form-control" placeholder="Enter GST Number" required="">
+            </div>
+            <div class="col-md-3">
+              <label>GST Location</label>
+              <input type="text" class="form-control" placeholder="GST Location" required="">
+            </div>
+          </div>
+        </div>
+        <div class="form-group-style">
+          <div class="row">
+            <div class="col-md-3">
+              <label><strong>Customer Details:</strong> Salutation</label>
+              <select class="form-control">
+                <option value="0">Select</option>
+                <option value="1">Mr.</option>
+                <option value="2">Mrs.</option>
+                <option value="3">Miss.</option>
+                <option value="4">Miss.</option>
+              </select>
+            </div>
+            <div class="col-md-3">
+              <label>First Name</label>
+              <div class="input-group">
+                <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                <input type="text" class="form-control" placeholder="Enter First Name" required>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <label>Middle Name</label>
+              <div class="input-group">
+                <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                <input type="text" class="form-control" placeholder="Enter Middle Name" required>
+              </div>
+            </div>
+
+            <div class="col-md-3">
+
+              <label>Last Name</label>
+              <div class="input-group">
+                <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                <input type="text" class="form-control" placeholder="Enter Last Name" required>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="form-group-style">
+          <div class="row">
+            <div class="col-md-3">
+              <label>Date of Birth</label>
+              <div class="input-group">
+                <span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
+                <input id="example-datetime-local-input" type="date" class="form-control" placeholder="Enter Date...">
+                <!-- <input class="form-control" type="datetime-local" value="2011-08-19T13:45:00" id="example-datetime-local-input"> -->
+              </div>
+            </div>
+            <div class="col-md-3">
+              <label>Marital Status</label>
+              <select name="MaritalStatus" class="form-control">
+                <option value="0">Select</option>
+                <option value="1">Single</option>
+                <option value="2">Married</option>
+              </select>
+            </div>
+            <div class="col-md-3">
+              <label>Gender</label>
+              <select name="Gender" class="form-control">
+                <option value="0">Select</option>
+                <option value="1">Male</option>
+                <option value="2">Female</option>
+              </select>
+            </div>
+            <div class="col-md-3">
+              <label>Residential Status (Home)</label>
+              <select name="MaritalStatus" class="form-control">
+                <option value="0">Select</option>
+                <option value="1">Self</option>
+                <option value="2">Rented</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <div class="form-group-style">
+          <div class="row">
+            <div class="col-md-3">
+              <label>Nationality</label>
+              <select name="Nationality" class="form-control">
+                <option value="0">Select</option>
+                <option value="1">Indian</option>
+                <option value="2">USA</option>
+                <option value="3">UK</option>
+              </select>
+            </div>
+            <div class="col-md-3">
+              <label>Religion</label>
+              <select name="MaritalStatus" class="form-control">
+                <option value="0">Select</option>
+                <option value="1">Hindu</option>
+                <option value="2">Muslim</option>
+                <option value="3">Sikh</option>
+              </select>
+            </div>
+            <div class="col-md-3">
+              <label>Client Status</label>
+              <select name="MaritalStatus" class="form-control">
+                <option value="0">Select</option>
+                <option value="1">Resident Individual</option>
+                <option value="2">NRI</option>
+              </select>
+            </div>
+            <div class="col-md-3">
+              <label>Client Category</label>
+              <select name="MaritalStatus" class="form-control">
+                <option value="0">Select</option>
+                <option value="1">Individual</option>
+                <option value="2">HUF</option>
+                <option value="3">Company</option>
+                <option value="4">Partnership</option>
+                <option value="5">Trust</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <div class="form-group-style">
+          <div class="row">
+            <div class="col-md-3">
+              <label><strong>Father/Spouse Details:</strong> Salutation</label>
+              <select name="Relationship3" class="form-control">
+                <option value="0">Select</option>
+                <option value="1">Mr.</option>
+                <option value="2">Mrs.</option>
+                <option value="3">Miss.</option>
+                <option value="4">Miss.</option>
+              </select>
+            </div>
+            <div class="col-md-3">
+              <label>First Name</label>
+              <div class="input-group">
+                <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                <input type="text" class="form-control" placeholder="Enter First Name" required>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <label>Middle Name</label>
+              <div class="input-group">
+                <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                <input type="text" class="form-control" placeholder="Enter Middle Name" required>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <label>Last Name</label>
+              <div class="input-group">
+                <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                <input type="text" class="form-control" placeholder="Enter Last Name" required>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="form-group-style">
+          <div class="row">
+            <div class="col-md-3">
+              <label><strong>Mother's Details:</strong> Salutation</label>
+              <select name="Relationship3" class="form-control">
+                <option value="0">Select</option>
+                <option value="1">Mr.</option>
+                <option value="2">Mrs.</option>
+                <option value="3">Miss.</option>
+                <option value="4">Miss.</option>
+              </select>
+            </div>
+            <div class="col-md-3">
+              <label>First Name</label>
+              <div class="input-group">
+                <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                <input type="text" class="form-control" placeholder="Enter First Name" required>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <label>Middle Name</label>
+              <div class="input-group">
+                <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                <input type="text" class="form-control" placeholder="Enter Middle Name" required>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <label>Last Name</label>
+              <div class="input-group">
+                <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                <input type="text" class="form-control" placeholder="Enter Last Name" required>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="form-group-style">
+          <div class="row">
+            <div class="col-md-3">
+              <label>BO Category</label>
+              <select name="Relationship3" class="form-control">
+                <option value="0">Select</option>
+                <option value="1">CAT-1</option>
+                <option value="2">CAT-2</option>
+              </select>
+            </div>
+            <div class="col-md-3">
+              <label>Group Code</label>
+              <select name="Relationship3" class="form-control">
+                <option value="0">Select</option>
+                <option value="1">Yes</option>
+                <option value="2">No</option>
+              </select>
+            </div>
+            <div class="col-md-3">
+              <label>BO SUB-Status</label>
+              <select name="Relationship3" class="form-control">
+                <option value="0">Select</option>
+                <option value="1">Individual-Resident With Nomintion</option>
+                <option value="2">Individual-With Nominee</option>
+              </select>
+            </div>
+            <div class="col-md-3">
+              <label>BO Settelment Plan Flag</label>
+              <select name="Relationship3" class="form-control">
+                <option value="0">Select</option>
+                <option value="1">Yes</option>
+                <option value="2">No</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <div class="form-group-style">
+          <div class="row">
+            <div class="col-md-3">
+              <label>BO Settelment Cycle</label>
+              <select name="Relationship3" class="form-control">
+                <option value="0">Select</option>
+                <option value="1">EM</option>
+                <option value="2">Cycle-2</option>
+              </select>
+            </div>
+            <div class="col-md-3">
+              <label>BSDA Scheme</label><input type="checkbox" name="NotVerified" id="collapsedNav" />
+              <select name="Relationship3" class="form-control">
+                <option value="0">Select</option>
+                <option value="1">Scheme-1</option>
+                <option value="2">Scheme-2</option>
+              </select>
+            </div>
+            <div class="col-md-3">
+              <label>POA ID</label> <input type="checkbox" name="NotVerified" id="collapsedNav" />
+              <select name="Relationship3" class="form-control">
+                <option value="0">Select</option>
+                <option value="1">Yes</option>
+                <option value="2">No</option>
+              </select>
+            </div>
+            <div class="col-md-3">
+              <label>BPA/GPA Flag</label>
+              <select name="Relationship3" class="form-control">
+                <option value="0">Select</option>
+                <option value="1">BPA</option>
+                <option value="2">GPA</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <div class="form-group-style">
+          <div class="row">
+            <div class="col-md-3">
+              <label>Annual Report</label>
+              <select name="Relationship3" class="form-control">
+                <option value="0">Select</option>
+                <option value="1">Electronics</option>
+                <option value="2">Mannual</option>
+              </select>
+            </div>
+            <div class="col-md-3">
+              <label class="col-form-label">Setup Date</label>
+              <div class="input-group">
+                <span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
+                <input class="form-control" type="datetime-local" value="2011-08-19T13:45:00" id="example-datetime-local-input">
+              </div>
+            </div>
+            <div class="col-md-3">
+              <label>Effective From Date</label>
+              <div class="input-group">
+                <span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
+                <input class="form-control" type="datetime-local" value="2011-08-19T13:45:00" id="example-datetime-local-input">
+              </div>
+            </div>
+            <div class="col-md-3">
+              <label>CAT01 (POA)</label>
+              <select name="Relationship3" class="form-control">
+                <option value="0">Yes</option>
+                <option value="1">No</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <div class="d-flex justify-content-between form-group-style pb-1 pt-2">
+          <div class="btn-panel btn-panel-conversation  ml-1">
+            <!-- <label class="pr-3">CAT01 (POA): </label>
+              <label class="mr-3">Yes</label><input type="radio" name="NotVerified" id="collapsedNav" />
+              <label class="mr-3">No</label><input type="radio" name="NotVerified" id="collapsedNav" /> -->
+            <label class="mr-1">ECS Mandate</label><span class="btn btn-sm btn-default "><input type="checkbox" name="NotVerified" id="collapsedNav" /></span>
+            <label class="mr-1">RGESS</label><span class="btn btn-sm btn-default "><input type="checkbox" name="NotVerified" id="collapsedNav" /></span>
+            <label class="mr-1">Pledge Standing Occupation</label><span class="btn btn-sm btn-default "><input type="checkbox" name="NotVerified" id="collapsedNav" /></span>
+            <label class="mr-1">Email RTA Download</label><span class="btn btn-sm btn-default "><input type="checkbox" name="NotVerified" id="collapsedNav" /></span>
+          </div>
+          <div class="">
+            <div class="btn-panel btn-panel-msg mr-1">
+              <button class="btn btn-sm btn-success mr-1"><span class="glyphicon glyphicon-floppy-save"></span> Save</button>
+              <button class="btn btn-sm btn-info mr-1"><span class="glyphicon glyphicon-edit"></span> Edit</button>
+              <button class="btn btn-sm btn-danger mr-1"><span class="glyphicon glyphicon-trash"></span> Delete</button>
+              <button class="btn btn-sm btn-warning mr-1"><span class="glyphicon glyphicon-refresh"></span> Reset</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="d-flex justify-content-between bg-primary pb-1 pt-2 pl-2 pr-2">
+          <div class="btn-panel btn-panel-conversation">
+            <h6 class="ml-1 mt-1"><i class="fa fa-address-card-o mr-1 mt-1"></i>Add Service provider</h6>
+          </div>
+
+        </div>
+        <div>
+          <div class="form-group-style">
+            <div class="row">
+              <div class="input-group" style="margin-left: 1%;">
+                <div class="btn-panel btn-panel-conversation  ml-1">
+                  <label class="mr-1">Mail</label><span class="btn btn-sm btn-default "><input type="checkbox" name="NotVerified" id="collapsedNav" /></span>
+                  <label class="mr-1">SMS</label><span class="btn btn-sm btn-default "><input type="checkbox" name="NotVerified" id="collapsedNav" /></span>
+                  <label class="mr-1">Push Notification</label><span class="btn btn-sm btn-default "><input type="checkbox" name="NotVerified" id="collapsedNav" /></span>
+                </div>
+              </div>
+              <div class=" col-md-9">
+                <label>Service Provider Name</label>
+                <div class="input-group">
+                  <span class="input-group-addon"><i class="glyphicon glyphicon-grain"></i></span>
+                  <input type="text" class="form-control" placeholder="Service Provider Name" required>
+                </div>
+              </div>
+              <div class="col-md-3">
+                <label>Service Provider Status</label>
+                <select name="ServiceProviderStatus" class="form-control">
+                  <option value="0">Select</option>
+                  <option value="1">Active</option>
+                  <option value="2">In-Active</option>
+                </select>
+              </div>
+
+            </div>
+          </div>
+          <div class="form-group-style">
+            <div class="row">
+              <div class="col-md-6">
+                <label>Service Provider URL</label>
+                <div class="input-group">
+                  <span class="input-group-addon"><i class="glyphicon glyphicon-link"></i></span>
+                  <input type="text" class="form-control" placeholder="Service Provider URL" required>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <label>Service Provider UserName</label>
+                <div class="input-group">
+                  <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                  <input type="text" class="form-control" placeholder="Service Provider UserName" required>
+                </div>
+              </div>
+              <!--<div class="col-md-3">
+                <label>State Name</label>
+                <select name="StateName" class="form-control">
+                  <option value="0">Select</option>
+                  <option value="1">Rajasthan</option>
+                  <option value="2">Gujrat</option>
+                  <option value="3">Maharastra</option>
+                  <option value="4">Bihar</option>
+                </select>
+              </div>-->
+
+            </div>
+          </div>
+          <div class="form-group-style">
+            <div class="row">
+              <div class="col-md-6">
+                <label>Service Provider Password</label>
+                <div class="input-group">
+                  <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
+                  <input type="text" class="form-control" placeholder="Service Provider Password" required>
+                </div>
+              </div>
+              <div class="col-md-3">
+                <label>City Name</label>
+                <select name="CityName" class="form-control">
+                  <option value="0">Select</option>
+                  <option value="1">Jodhpur</option>
+                  <option value="2">Jaipu</option>
+                  <option value="3">Surat</option>
+                  <option value="4">Gaya</option>
+                </select>
+              </div>
+              <!--<div class="col-md-3">
+                <label>Pin Code</label>
+                <div class="input-group">
+                  <span class="input-group-addon"><i class="glyphicon glyphicon-map-marker"></i></span>
+                  <input type="number" class="form-control" placeholder="Enter PIN Code" required>
+                </div>
+              </div>
+              <div class="col-md-3">
+                <label>State Code</label>
+                <div class="input-group">
+                  <span class="input-group-addon"><i class="glyphicon glyphicon-map-marker"></i></span>
+                  <input type="number" class="form-control" placeholder="State Code" required>
+                </div>
+              </div>-->
+            </div>
+          </div>
+          <div class="form-group-style">
+            <div class="row">
+              <div class="col-md-6">
+                <label>Contact Name and Details</label>
+                <div class="input-group">
+                  <span class="input-group-addon"><i class="glyphicon glyphicon-bookmark"></i></span>
+                  <input type="text" class="form-control" placeholder="Contact Name and Details" required>
+                </div>
+              </div>
+              <div class="col-md-3">
+                <label>District Name</label>
+                <select name="DistrictName" class="form-control">
+                  <option value="0">Select</option>
+                  <option value="1">Jodhpur</option>
+                  <option value="2">Jaipu</option>
+                  <option value="3">Surat</option>
+                  <option value="4">Gaya</option>
+                </select>
+              </div>
+              <div class="col-md-3">
+                <label>Village/Taluka</label>
+                <select name="DistrictName" class="form-control">
+                  <option value="0">Select</option>
+                  <option value="1">Jodhpur</option>
+                  <option value="2">Jaipu</option>
+                  <option value="3">Surat</option>
+                  <option value="4">Gaya</option>
+                </select>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="d-flex justify-content-between form-group-style pb-1 pt-2">
+          <!--<div class="btn-panel btn-panel-conversation  ml-1">
+            <label class="ml-2">Resident For Tax Purposes in Jurisdiction (S) out side India</label>
+            <span class="ml-1"><input type="radio" name="Verified" class="btn btn-sm" /><label class="ml-1">Yes</label></span>
+            <span class="ml-1"><input type="radio" name="Verified" class="btn btn-sm" /><label class="ml-1">No</label></span>
+          </div>-->
+          <div class="">
+            <div class="btn-panel btn-panel-msg mr-1">
+              <button class="btn btn-sm btn-success mr-1"><span class="glyphicon glyphicon-floppy-save"></span> Create</button>
+              <!--<button class="btn btn-sm btn-info mr-1"><span class="glyphicon glyphicon-edit"></span> Edit</button>-->
+              <button class="btn btn-sm btn-warning mr-1"><span class="glyphicon glyphicon-refresh"></span> Reset</button>
+              <button class="btn btn-sm btn-danger mr-1"><span class="glyphicon glyphicon-remove"></span> Cancel</button>
+            </div>
+          </div>
+        </div>
+        <div class="d-flex justify-content-between bg-primary pb-1 pt-2">
+          <div class="btn-panel btn-panel-conversation">
+            <h6 class="ml-3 mt-1"><i class="fa fa-address-card-o mr-1 mt-1"></i>Customer Address Information</h6>
+          </div>
+        </div>
+        <table class="table">
+          <thead style="border: 1px solid #CDCDCD; background-color:#F1F1F1">
+            <tr>
+              <th style="border: 1px solid #CDCDCD">Address Type</th>
+              <th style="border: 1px solid #CDCDCD">Address-1</th>
+              <th style="border: 1px solid #CDCDCD">Address-2</th>
+              <th style="border: 1px solid #CDCDCD">Address-3</th>
+              <th style="border: 1px solid #CDCDCD">ZIP</th>
+              <th style="border: 1px solid #CDCDCD">City</th>
+              <th style="border: 1px solid #CDCDCD">State</th>
+              <th style="border: 1px solid #CDCDCD">Country</th>
+              <th style="border: 1px solid #CDCDCD">Actions</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td style="border: 1px solid #CDCDCD">Residential Address</td>
+              <td style="border: 1px solid #CDCDCD">B-13 Arvind Nagar</td>
+              <td style="border: 1px solid #CDCDCD">Air Force Area</td>
+              <td style="border: 1px solid #CDCDCD">National Park</td>
+              <td style="border: 1px solid #CDCDCD">823001</td>
+              <td style="border: 1px solid #CDCDCD">Gaya</td>
+              <td style="border: 1px solid #CDCDCD">Bihar</td>
+              <td style="border: 1px solid #CDCDCD">India</td>
+              <td style="border: 1px solid #ddd">
+                <button class="btn btn-info"><span class="fa fa-edit "></span></button>
+                <button class="btn btn-primary"><span class="fa fa-eye"></span></button>
+                <button class="btn btn-danger"><span class="fa fa-trash"></span></button>
+              </td>
+            </tr>
+            <tr>
+              <td style="border: 1px solid #CDCDCD">Residential Address</td>
+              <td style="border: 1px solid #CDCDCD">B-13 Arvind Nagar</td>
+              <td style="border: 1px solid #CDCDCD">Air Force Area</td>
+              <td style="border: 1px solid #CDCDCD">National Park</td>
+              <td style="border: 1px solid #CDCDCD">823001</td>
+              <td style="border: 1px solid #CDCDCD">Gaya</td>
+              <td style="border: 1px solid #CDCDCD">Bihar</td>
+              <td style="border: 1px solid #CDCDCD">India</td>
+              <td style="border: 1px solid #ddd">
+                <button class="btn btn-warning"><span class="fa fa-edit "></span></button>
+                <button class="btn btn-info"><span class="fa fa-eye"></span></button>
+                <button class="btn btn-danger"><span class="fa fa-trash"></span></button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div>
+        <div class="d-flex justify-content-between bg-primary pb-1 pt-2 pl-2 pr-2">
+          <div class="btn-panel btn-panel-conversation">
+            <h6 class="ml-1 mt-1"><i class="fa fa-address-card-o mr-1 mt-1"></i>Customer Contact Information</h6>
+          </div>
+
+        </div>
+        <div>
+          <div>
+            <div class="form-group-style">
+              <div class="row">
+                <div class="col-md-4">
+                  <label>Contact Type</label>
+                  <select name="ContactType" class="form-control">
+                    <option value="0">Select</option>
+                    <option value="1">Mobile Number</option>
+                    <option value="2">Land Line</option>
+                    <option value="3">FAX Number</option>
+                    <option value="4">Email Id</option>
+                  </select>
+                </div>
+                <div class="col-md-4">
+                  <label>Contact Details</label>
+                  <div class="input-group">
+                    <span class="input-group-addon"><i class="glyphicon glyphicon-phone"></i></span>
+                    <input type="text" class="mask_phone form-control" value="">
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <label>Relationship</label>
+                  <select name="Relationship1" class="form-control">
+                    <option value="0">Select</option>
+                    <option value="1">Self</option>
+                    <option value="2">Spouse</option>
+                    <option value="3">Dependent Child</option>
+                    <option value="4">Dependent Parent</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            <div class="d-flex justify-content-between form-group-style pb-1 pt-2">
+              <div class="btn-panel btn-panel-conversation  ml-1">
+                <label class="ml-2">Test</label>
+              </div>
+              <div class="">
+                <div class="btn-panel btn-panel-msg mr-1">
+                  <button class="btn btn-sm btn-success mr-1"><span class="glyphicon glyphicon-floppy-save"></span> Save</button>
+                  <button class="btn btn-sm btn-info mr-1"><span class="glyphicon glyphicon-edit"></span> Edit</button>
+                  <button class="btn btn-sm btn-danger mr-1"><span class="glyphicon glyphicon-trash"></span> Delete</button>
+                  <button class="btn btn-sm btn-warning mr-1"><span class="glyphicon glyphicon-refresh"></span> Reset</button>
+                </div>
+              </div>
+            </div>
+            <div class="d-flex justify-content-between bg-primary pb-1 pt-2">
+              <div class="btn-panel btn-panel-conversation">
+                <h6 class="ml-3 mt-1"><i class="fa fa-address-card-o mr-1 mt-1"></i>Customer Contact Information</h6>
+              </div>
+            </div>
+            <div class="table table-responsive">
+              <table class="table datatable">
+                <thead style="border: 1px solid #CDCDCD; background-color:#F1F1F1">
+                  <tr>
+                    <th style="border: 1px solid #CDCDCD">Contact Type</th>
+                    <th style="border: 1px solid #CDCDCD">Contact Details </th>
+                    <th style="border: 1px solid #CDCDCD">Relationship</th>
+                    <th style="border: 1px solid #CDCDCD">Created Date</th>
+                    <th style="border: 1px solid #CDCDCD">Modified Date</th>
+                    <th style="border: 1px solid #CDCDCD">Created By</th>
+                    <th style="border: 1px solid #CDCDCD">Modified By</th>
+                    <th style="border: 1px solid #CDCDCD; width:100px">Actions</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td style="border: 1px solid #CDCDCD">Primary Mobile Number</td>
+                    <td style="border: 1px solid #CDCDCD">91 (967) 222-04-76</td>
+                    <td style="border: 1px solid #CDCDCD">Self</td>
+                    <td style="border: 1px solid #CDCDCD">22-May-2015</td>
+                    <td style="border: 1px solid #CDCDCD">22-May-2016</td>
+                    <td style="border: 1px solid #CDCDCD">934516</td>
+                    <td style="border: 1px solid #CDCDCD">928214</td>
+                    <td style="border: 1px solid #ddd">
+                      <button class="btn btn-info"><span class="fa fa-edit "></span></button>
+                      <button class="btn btn-primary"><span class="fa fa-eye"></span></button>
+                      <button class="btn btn-danger"><span class="fa fa-trash"></span></button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td style="border: 1px solid #CDCDCD">Secondary Mobile Number</td>
+                    <td style="border: 1px solid #CDCDCD">91 (967) 222-04-86</td>
+                    <td style="border: 1px solid #CDCDCD">Self</td>
+                    <td style="border: 1px solid #CDCDCD">22-May-2015</td>
+                    <td style="border: 1px solid #CDCDCD">22-May-2016</td>
+                    <td style="border: 1px solid #CDCDCD">934516</td>
+                    <td style="border: 1px solid #CDCDCD">928214</td>
+                    <td style="border: 1px solid #ddd">
+                      <button class="btn btn-info"><span class="fa fa-edit "></span></button>
+                      <button class="btn btn-primary"><span class="fa fa-eye"></span></button>
+                      <button class="btn btn-danger"><span class="fa fa-trash"></span></button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td style="border: 1px solid #CDCDCD">Primary Email</td>
+                    <td style="border: 1px solid #CDCDCD">nikhilsinha@rathi.com</td>
+                    <td style="border: 1px solid #CDCDCD">Self</td>
+                    <td style="border: 1px solid #CDCDCD">22-May-2015</td>
+                    <td style="border: 1px solid #CDCDCD">22-May-2016</td>
+                    <td style="border: 1px solid #CDCDCD">934516</td>
+                    <td style="border: 1px solid #CDCDCD">928214</td>
+                    <td style="border: 1px solid #ddd">
+                      <button class="btn btn-info"><span class="fa fa-edit "></span></button>
+                      <button class="btn btn-primary"><span class="fa fa-eye"></span></button>
+                      <button class="btn btn-danger"><span class="fa fa-trash"></span></button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td style="border: 1px solid #CDCDCD">Secondary Email</td>
+                    <td style="border: 1px solid #CDCDCD">nikhilhome@rathi.com</td>
+                    <td style="border: 1px solid #CDCDCD">Self</td>
+                    <td style="border: 1px solid #CDCDCD">22-May-2015</td>
+                    <td style="border: 1px solid #CDCDCD">22-May-2016</td>
+                    <td style="border: 1px solid #CDCDCD">934516</td>
+                    <td style="border: 1px solid #CDCDCD">928214</td>
+                    <td style="border: 1px solid #ddd">
+                      <button class="btn btn-info"><span class="fa fa-edit "></span></button>
+                      <button class="btn btn-primary"><span class="fa fa-eye"></span></button>
+                      <button class="btn btn-danger"><span class="fa fa-trash"></span></button>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="d-flex justify-content-between bg-primary pb-1 pt-2 pl-2 pr-2">
+          <div class="btn-panel btn-panel-conversation">
+            <h6 class="ml-1 mt-1"><i class="fa fa-address-card-o mr-1 mt-1"></i>Customer Bank Information</h6>
+          </div>
+
+        </div>
+        <div>
+          <div class="form-group-style">
+            <div class="row">
+              <div class="col-md-4">
+                <label>Account Number</label>
+                <div class="input-group">
+                  <span class="input-group-addon"><i class="glyphicon glyphicon-folder-open"></i></span>
+                  <input type="number" class="form-control" placeholder="Account Number" required>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <label>IFSC Code</label>
+                <div class="input-group">
+                  <input type="text" placeholder="IFSC Code" class="form-control" />
+                  <div class="input-group-btn">
+                    <button class="btn btn-info" type="button"><span class="glyphicon glyphicon-search"></span></button>
+                    <button class="btn btn-primary" type="button"><span class="glyphicon glyphicon-file"></span></button>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <label>MICR Number</label>
+                <div class="input-group">
+                  <input type="text" placeholder="MICR Number" class="form-control" />
+                  <div class="input-group-btn">
+                    <button class="btn btn-info" type="button"><span class="glyphicon glyphicon-search"></span></button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="form-group-style">
+            <div class="row">
+              <div class="col-md-4">
+                <label>Bank Name</label>
+                <div class="input-group">
+                  <span class="input-group-addon"><i class="glyphicon glyphicon-folder-open"></i></span>
+                  <input type="text" class="form-control" placeholder="Enter Bank Name" required>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <label>Branch Name</label>
+                <div class="input-group">
+                  <span class="input-group-addon"><i class="glyphicon glyphicon-folder-open"></i></span>
+                  <input type="text" class="form-control" placeholder="Branch Name" required>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <label>Account Type</label>
+                <select name="Relationship3" class="form-control">
+                  <option value="0">Select</option>
+                  <option value="1">Saving</option>
+                  <option value="2">Salary</option>
+                  <option value="3">Recuring</option>
+                </select>
+              </div>
+            </div>
+          </div>
+          <div class="d-flex justify-content-between form-group-style pb-1 pt-2">
+            <div class="btn-panel btn-panel-conversation  ml-1">
+              <label class="ml-2">Test</label>
+            </div>
+            <div class="">
+              <div class="btn-panel btn-panel-msg mr-1">
+                <button class="btn btn-sm btn-success mr-1"><span class="glyphicon glyphicon-floppy-save"></span> Save</button>
+                <button class="btn btn-sm btn-info mr-1"><span class="glyphicon glyphicon-edit"></span> Edit</button>
+                <button class="btn btn-sm btn-danger mr-1"><span class="glyphicon glyphicon-trash"></span> Delete</button>
+                <button class="btn btn-sm btn-warning mr-1"><span class="glyphicon glyphicon-refresh"></span> Reset</button>
+              </div>
+            </div>
+          </div>
+          <div class="d-flex justify-content-between bg-primary pb-1 pt-2">
+            <div class="btn-panel btn-panel-conversation">
+              <h6 class="ml-3 mt-1"><i class="fa fa-address-card-o mr-1 mt-1"></i>Customer Bank Information</h6>
+            </div>
+          </div>
+          <div class="table table-responsive">
+            <table class="table datatable">
+              <thead style="border: 1px solid #CDCDCD; background-color:#F1F1F1">
+                <tr>
+                  <th style="border: 1px solid #CDCDCD">Bank Name</th>
+                  <th style="border: 1px solid #CDCDCD">Branch Name</th>
+                  <th style="border: 1px solid #CDCDCD">Branch Code</th>
+                  <th style="border: 1px solid #CDCDCD">Account Number</th>
+                  <th style="border: 1px solid #CDCDCD">Account Type</th>
+                  <th style="border: 1px solid #CDCDCD">MICR Number</th>
+                  <th style="border: 1px solid #CDCDCD">IFSC Code</th>
+                  <th style="border: 1px solid #CDCDCD; width:100px">Actions</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td style="border: 1px solid #CDCDCD">State Bank Of India</td>
+                  <td style="border: 1px solid #CDCDCD">Goal Market</td>
+                  <td style="border: 1px solid #CDCDCD">063451</td>
+                  <td style="border: 1px solid #CDCDCD">123457890987654</td>
+                  <td style="border: 1px solid #CDCDCD">Saving</td>
+                  <td style="border: 1px solid #CDCDCD">1234567890</td>
+                  <td style="border: 1px solid #CDCDCD">0987654321</td>
+                  <td style="border: 1px solid #ddd">
+                    <button class="btn btn-info"><span class="fa fa-edit "></span></button>
+                    <button class="btn btn-primary"><span class="fa fa-eye"></span></button>
+                    <button class="btn btn-danger"><span class="fa fa-trash"></span></button>
+                  </td>
+                </tr>
+                <tr>
+                  <td style="border: 1px solid #CDCDCD">State Bank Of India</td>
+                  <td style="border: 1px solid #CDCDCD">Goal Market</td>
+                  <td style="border: 1px solid #CDCDCD">063451</td>
+                  <td style="border: 1px solid #CDCDCD">123457890987654</td>
+                  <td style="border: 1px solid #CDCDCD">Saving</td>
+                  <td style="border: 1px solid #CDCDCD">1234567890</td>
+                  <td style="border: 1px solid #CDCDCD">0987654321</td>
+                  <td style="border: 1px solid #ddd">
+                    <button class="btn btn-info"><span class="fa fa-edit "></span></button>
+                    <button class="btn btn-primary"><span class="fa fa-eye"></span></button>
+                    <button class="btn btn-danger"><span class="fa fa-trash"></span></button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="d-flex justify-content-between bg-primary pb-1 pt-2 pl-2 pr-2">
+          <div class="btn-panel btn-panel-conversation">
+            <h6 class="ml-1 mt-1"><i class="fa fa-address-card-o mr-1 mt-1"></i>Customer Qualification / Employment / Annual Income Information</h6>
+          </div>
+
+        </div>
+        <div>
+          <div class="form-group-style">
+            <div class="row">
+              <div class="col-md-3">
+                <label>Qualification</label>
+                <select class="form-control" required="">
+                  <option>Select</option>
+                  <option>MBA</option>
+                  <option>MCA</option>
+                  <option>MCOM</option>
+                  <option>MSC</option>
+                  <option>MA</option>
+                  <option>BCOM</option>
+                  <option>BSC</option>
+                  <option>BA</option>
+                </select>
+              </div>
+              <div class="col-md-3">
+                <label>Occupation</label>
+                <select class="form-control" required="">
+                  <option>Select</option>
+                  <option>Business</option>
+                  <option>Self</option>
+                  <option>Housewife</option>
+                </select>
+              </div>
+              <div class="col-md-3">
+                <label>Name Of Company</label>
+                <input type="text" class="form-control" placeholder="Enter Name Of Company" required="">
+              </div>
+              <div class="col-md-3">
+                <label>Nature Of Business</label>
+                <select class="form-control" required="">
+                  <option>Select</option>
+                  <option>Type-1</option>
+                  <option>Type-2</option>
+                  <option>Type-3</option>
+                </select>
+              </div>
+            </div>
+          </div>
+          <div class="form-group-style">
+            <div class="row">
+              <div class="col-md-3">
+                <label>Annual Income Range</label>
+                <select class="form-control" required="" style="width:100%">
+                  <option>Select</option>
+                  <option>Business</option>
+                  <option>Self</option>
+                  <option>Housewife</option>
+                </select>
+              </div>
+              <div class="col-md-3">
+                <label>Networth</label>
+                <input type="text" class="form-control" placeholder="Enter Networth" required="">
+              </div>
+              <div class="col-md-3">
+                <label>Net Worth Date</label>
+                <div class="input-group">
+                  <span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
+                  <input id="minMaxExample" type="date" class="form-control" placeholder="Enter Date...">
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="d-flex justify-content-between form-group-style pb-1 pt-2">
+            <div class="btn-panel btn-panel-conversation  ml-1">
+              <label class="ml-2">Test</label>
+            </div>
+            <div class="">
+              <div class="btn-panel btn-panel-msg mr-1">
+                <button class="btn btn-sm btn-success mr-1"><span class="glyphicon glyphicon-floppy-save"></span> Save</button>
+                <button class="btn btn-sm btn-info mr-1"><span class="glyphicon glyphicon-edit"></span> Edit</button>
+                <button class="btn btn-sm btn-danger mr-1"><span class="glyphicon glyphicon-trash"></span> Delete</button>
+                <button class="btn btn-sm btn-warning mr-1"><span class="glyphicon glyphicon-refresh"></span> Reset</button>
+              </div>
+            </div>
+          </div>
+          <div class="d-flex justify-content-between bg-primary pb-1 pt-2">
+            <div class="btn-panel btn-panel-conversation">
+              <h6 class="ml-3 mt-1"><i class="fa fa-address-card-o mr-1 mt-1"></i>Customer Qualification / Employment / Annual Income Information</h6>
+            </div>
+          </div>
+          <div class="table table-responsive">
+            <table class="table datatable">
+              <thead style="border: 1px solid #CDCDCD; background-color:#F1F1F1">
+                <tr>
+                  <th style="border: 1px solid #CDCDCD">Qualification</th>
+                  <th style="border: 1px solid #CDCDCD">Occupation</th>
+                  <th style="border: 1px solid #CDCDCD">Annual Income</th>
+                  <th style="border: 1px solid #CDCDCD">Networth</th>
+                  <th style="border: 1px solid #CDCDCD; width:200px">Actions</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td style="border: 1px solid #CDCDCD">Master In Science</td>
+                  <td style="border: 1px solid #CDCDCD">Pharmasist</td>
+                  <td style="border: 1px solid #CDCDCD">100000-500000</td>
+                  <td style="border: 1px solid #CDCDCD">1000000</td>
+                  <td style="border: 1px solid #ddd">
+                    <button class="btn btn-info"><span class="fa fa-edit "></span></button>
+                    <button class="btn btn-primary"><span class="fa fa-eye"></span></button>
+                    <button class="btn btn-danger"><span class="fa fa-trash"></span></button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="d-flex justify-content-between bg-primary pb-1 pt-2 pl-2 pr-2">
+          <div class="btn-panel btn-panel-conversation">
+            <h6 class="ml-1 mt-1"><i class="fa fa-address-card-o mr-1 mt-1"></i>Customer Identity Information</h6>
+          </div>
+        </div>
+        <div>
+          <div class="form-group-style">
+            <div class="row">
+              <div class="col-md-4">
+                <label>Identity Type</label>
+                <select class="form-control" required="">
+                  <option>Passport</option>
+                  <option>PAN</option>
+                  <option>AADHAR</option>
+                  <option>Driving License</option>
+                  <option>Voter Card</option>
+                </select>
+              </div>
+              <div class="col-md-4">
+                <label>Identity Number/ID</label>
+                <input type="text" class="form-control" placeholder="Enter Issued At" required="">
+              </div>
+              <div class="col-md-4">
+                <label>Authority</label>
+                <select class="form-control" required="">
+                  <option>Passport</option>
+                  <option>PAN</option>
+                  <option>AADHAR</option>
+                  <option>Driving License</option>
+                  <option>Voter Card</option>
+                </select>
+              </div>
+            </div>
+          </div>
+          <div class="form-group-style">
+            <div class="row">
+              <div class="col-md-4">
+                <label>Issued From</label>
+                <input type="text" class="form-control" placeholder="Enter Issued At" required="">
+              </div>
+              <div class="col-md-4">
+                <label>Issued On</label>
+                <input id="minMaxExample" type="date" class="form-control" placeholder="Enter Date...">
+              </div>
+              <div class="col-md-4">
+                <label>Expires On</label>
+                <input id="minMaxExample" type="date" class="form-control" placeholder="Enter Date...">
+              </div>
+            </div>
+          </div>
+          <div class="d-flex justify-content-between form-group-style pb-1 pt-2">
+            <div class="btn-panel btn-panel-conversation  ml-1">
+              <label class="ml-2">Test</label>
+            </div>
+            <div class="">
+              <div class="btn-panel btn-panel-msg mr-1">
+                <button class="btn btn-sm btn-success mr-1"><span class="glyphicon glyphicon-floppy-save"></span> Save</button>
+                <button class="btn btn-sm btn-info mr-1"><span class="glyphicon glyphicon-edit"></span> Edit</button>
+                <button class="btn btn-sm btn-danger mr-1"><span class="glyphicon glyphicon-trash"></span> Delete</button>
+                <button class="btn btn-sm btn-warning mr-1"><span class="glyphicon glyphicon-refresh"></span> Reset</button>
+              </div>
+            </div>
+          </div>
+          <div class="d-flex justify-content-between bg-primary pb-1 pt-2">
+            <div class="btn-panel btn-panel-conversation">
+              <h6 class="ml-3 mt-1"><i class="fa fa-address-card-o mr-1 mt-1"></i>Customer Identity Information</h6>
+            </div>
+          </div>
+          <div class="table table-responsive">
+            <table class="table datatable">
+              <thead style="border: 1px solid #CDCDCD; background-color:#F1F1F1">
+                <tr>
+                  <th style="border: 1px solid #CDCDCD">Contact Type</th>
+                  <th style="border: 1px solid #CDCDCD">Contact Details </th>
+                  <th style="border: 1px solid #CDCDCD">Relationship</th>
+                  <th style="border: 1px solid #CDCDCD">Created Date</th>
+                  <th style="border: 1px solid #CDCDCD">Modified Date</th>
+                  <th style="border: 1px solid #CDCDCD">Created By</th>
+                  <th style="border: 1px solid #CDCDCD">Modified By</th>
+                  <th style="border: 1px solid #CDCDCD; width:100px">Actions</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td style="border: 1px solid #CDCDCD">Primary Mobile Number</td>
+                  <td style="border: 1px solid #CDCDCD">91 (967) 222-04-76</td>
+                  <td style="border: 1px solid #CDCDCD">Self</td>
+                  <td style="border: 1px solid #CDCDCD">22-May-2015</td>
+                  <td style="border: 1px solid #CDCDCD">22-May-2016</td>
+                  <td style="border: 1px solid #CDCDCD">934516</td>
+                  <td style="border: 1px solid #CDCDCD">928214</td>
+                  <td style="border: 1px solid #ddd">
+                    <button class="btn btn-info"><span class="fa fa-edit "></span></button>
+                    <button class="btn btn-primary"><span class="fa fa-eye"></span></button>
+                    <button class="btn btn-danger"><span class="fa fa-trash"></span></button>
+                  </td>
+                </tr>
+                <tr>
+                  <td style="border: 1px solid #CDCDCD">Secondary Mobile Number</td>
+                  <td style="border: 1px solid #CDCDCD">91 (967) 222-04-86</td>
+                  <td style="border: 1px solid #CDCDCD">Self</td>
+                  <td style="border: 1px solid #CDCDCD">22-May-2015</td>
+                  <td style="border: 1px solid #CDCDCD">22-May-2016</td>
+                  <td style="border: 1px solid #CDCDCD">934516</td>
+                  <td style="border: 1px solid #CDCDCD">928214</td>
+                  <td style="border: 1px solid #ddd">
+                    <button class="btn btn-info"><span class="fa fa-edit "></span></button>
+                    <button class="btn btn-primary"><span class="fa fa-eye"></span></button>
+                    <button class="btn btn-danger"><span class="fa fa-trash"></span></button>
+                  </td>
+                </tr>
+                <tr>
+                  <td style="border: 1px solid #CDCDCD">Primary Email</td>
+                  <td style="border: 1px solid #CDCDCD">nikhilsinha@rathi.com</td>
+                  <td style="border: 1px solid #CDCDCD">Self</td>
+                  <td style="border: 1px solid #CDCDCD">22-May-2015</td>
+                  <td style="border: 1px solid #CDCDCD">22-May-2016</td>
+                  <td style="border: 1px solid #CDCDCD">934516</td>
+                  <td style="border: 1px solid #CDCDCD">928214</td>
+                  <td style="border: 1px solid #ddd">
+                    <button class="btn btn-info"><span class="fa fa-edit "></span></button>
+                    <button class="btn btn-primary"><span class="fa fa-eye"></span></button>
+                    <button class="btn btn-danger"><span class="fa fa-trash"></span></button>
+                  </td>
+                </tr>
+                <tr>
+                  <td style="border: 1px solid #CDCDCD">Secondary Email</td>
+                  <td style="border: 1px solid #CDCDCD">nikhilhome@rathi.com</td>
+                  <td style="border: 1px solid #CDCDCD">Self</td>
+                  <td style="border: 1px solid #CDCDCD">22-May-2015</td>
+                  <td style="border: 1px solid #CDCDCD">22-May-2016</td>
+                  <td style="border: 1px solid #CDCDCD">934516</td>
+                  <td style="border: 1px solid #CDCDCD">928214</td>
+                  <td style="border: 1px solid #ddd">
+                    <button class="btn btn-info"><span class="fa fa-edit "></span></button>
+                    <button class="btn btn-primary"><span class="fa fa-eye"></span></button>
+                    <button class="btn btn-danger"><span class="fa fa-trash"></span></button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="d-flex justify-content-between bg-primary pb-1 pt-2 pl-2 pr-2">
+          <div class="btn-panel btn-panel-conversation">
+            <h6 class="ml-1 mt-1"><i class="fa fa-address-card-o mr-1 mt-1"></i>Customer Nominee Information</h6>
+          </div>
+        </div>
+        <div>
+          <div class="form-group-style">
+            <div class="row">
+              <div class="col-md-3">
+                <label>Nominee Name:Salutaion</label>
+                <select class="form-control">
+                  <option>Mr.</option>
+                  <option>Mrs.</option>
+                  <option>Miss.</option>
+                </select>
+              </div>
+              <div class="col-md-3">
+                <label>First Name</label>
+                <input type="text" class="form-control" placeholder="Enter First Name" required="">
+              </div>
+              <div class="col-md-3">
+                <label>Middle Name</label>
+                <input type="text" class="form-control" placeholder="Enter Middle Name" required="">
+              </div>
+              <div class="col-md-3">
+                <label>Last Name</label>
+                <input type="text" class="form-control" placeholder="Enter Last Name" required="">
+              </div>
+            </div>
+          </div>
+          <div class="form-group-style">
+            <div class="row">
+              <div class="col-md-3">
+                <label>DOB (*) In case of minor</label>
+                <div class="input-group">
+                  <span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
+                  <input id='minMaxExample' type="date" class="form-control" placeholder="Enter Date...">
+                </div>
+              </div>
+              <div class="col-md-3">
+                <label>Relationship With Nominee</label>
+                <select class="form-control" required="" style="width:100%">
+                  <option>Select</option>
+                  <option>Mother</option>
+                  <option>Father Citizen</option>
+                  <option>Spouse</option>
+                </select>
+              </div>
+              <div class="col-md-3">
+                <label>PAN Number</label>
+                <input type="text" class="form-control" placeholder="Enter PAN Number" required="">
+              </div>
+              <div class="col-md-3">
+                <label>AADHAR Number</label>
+                <input type="text" class="form-control" placeholder="Enter AADHAR Number" required="">
+              </div>
+            </div>
+          </div>
+          <div class="form-group-style">
+            <div class="row">
+              <div class="col-md-3">
+                <label>Percentage (%) Allocation Securities</label>
+                <input type="text" class="form-control" placeholder="Shared (%)" required="">
+              </div>
+              <div class="col-md-3">
+                <label>Residual Securities</label>
+                <select class="form-control" required="" style="width:100%">
+                  <option>Select</option>
+                  <option>Yes</option>
+                  <option>No</option>
+                </select>
+              </div>
+            </div>
+          </div>
+          <div class="d-flex justify-content-between bg-primary pb-1 pt-2 pl-2 pr-2">
+            <div class="btn-panel btn-panel-conversation">
+              <h6 class="ml-1 mt-1"><i class="fa fa-address-card-o mr-1 mt-1"></i>Nominee Guardian Details</h6>
+            </div>
+            <div class="">
+              <div class="btn-panel btn-panel-msg">
+                <input type="radio" name="Verified" id="jDialog_form_button" /><label>Guardian Address Details</label>
+                <input type="radio" name="NotVerified" id="collapsedNav" /> <label>Guardian Contact Details</label>
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <div class="form-group-style">
+              <div class="row">
+                <div class="col-md-3">
+                  <label>Nominee Guardian Name:Salutaion</label>
+                  <select class="form-control" required="" style="width:100%">
+                    <option>Mr.</option>
+                    <option>Mrs.</option>
+                    <option>Miss.</option>
+                  </select>
+                </div>
+                <div class="col-md-3">
+                  <label>First Name</label>
+                  <input type="text" class="form-control" placeholder="Enter First Name" required="">
+                </div>
+                <div class="col-md-3">
+                  <label>Middle Name</label>
+                  <input type="text" class="form-control" placeholder="Enter Middle Name" required="">
+                </div>
+                <div class="col-md-3">
+                  <label>Last Name</label>
+                  <input type="text" class="form-control" placeholder="Enter Last Name" required="">
+                </div>
+              </div>
+            </div>
+            <div class="d-flex justify-content-between bg-primary pb-1 pt-2 pl-2 pr-2">
+              <div class="btn-panel btn-panel-conversation">
+                <h6 class="ml-1 mt-1"><i class="fa fa-address-card-o mr-1 mt-1"></i>Nominee Guardian Address Details</h6>
+              </div>
+            </div>
+            <div>
+              <div class="form-group-style">
+                <div class="row">
+                  <div class=" col-md-6">
+                    <label>Address-1</label>
+                    <div class="input-group">
+                      <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
+                      <input type="text" class="form-control" placeholder="Enter Address 1 " required>
+                    </div>
+                  </div>
+                  <div class="col-md-3">
+                    <label>Country Name</label>
+                    <select name="CountryName" class="form-control">
+                      <option value="0">Select</option>
+                      <option value="1">India</option>
+                      <option value="2">Bengladesh</option>
+                      <option value="3">Sri Lanka</option>
+                      <option value="4">China</option>
+                    </select>
+                  </div>
+                  <div class="col-md-3">
+                    <label>Country Code</label>
+                    <div class="input-group">
+                      <span class="input-group-addon"><i class="glyphicon glyphicon-map-marker"></i></span>
+                      <input type="number" class="form-control" placeholder="Country Code" required>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group-style">
+                <div class="row">
+                  <div class="col-md-6">
+                    <label>Address-2</label>
+                    <div class="input-group">
+                      <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
+                      <input type="text" class="form-control" placeholder="Enter Address 2 " required>
+                    </div>
+                  </div>
+                  <div class="col-md-3">
+                    <label>State Name</label>
+                    <select name="StateName" class="form-control">
+                      <option value="0">Select</option>
+                      <option value="1">Rajasthan</option>
+                      <option value="2">Gujrat</option>
+                      <option value="3">Maharastra</option>
+                      <option value="4">Bihar</option>
+                    </select>
+                  </div>
+                  <div class="col-md-3">
+                    <label>State Code</label>
+                    <div class="input-group">
+                      <span class="input-group-addon"><i class="glyphicon glyphicon-map-marker"></i></span>
+                      <input type="number" class="form-control" placeholder="State Code" required>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group-style">
+                <div class="row">
+                  <div class="col-md-6">
+                    <label>Address-3</label>
+                    <div class="input-group">
+                      <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
+                      <input type="text" class="form-control" placeholder="Enter Address 3 " required>
+                    </div>
+                  </div>
+                  <div class="col-md-3">
+                    <label>City Name</label>
+                    <select name="CityName" class="form-control">
+                      <option value="0">Select</option>
+                      <option value="1">Jodhpur</option>
+                      <option value="2">Jaipu</option>
+                      <option value="3">Surat</option>
+                      <option value="4">Gaya</option>
+                    </select>
+                  </div>
+                  <div class="col-md-3">
+                    <label>Pin Code</label>
+                    <div class="input-group">
+                      <span class="input-group-addon"><i class="glyphicon glyphicon-map-marker"></i></span>
+                      <input type="number" class="form-control" placeholder="Enter PIN Code" required>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group-style">
+                <div class="row">
+                  <div class="col-md-6">
+                    <label>Landmark</label>
+                    <div class="input-group">
+                      <span class="input-group-addon"><i class="glyphicon glyphicon-bookmark"></i></span>
+                      <input type="text" class="form-control" placeholder="Enter Landmark " required>
+                    </div>
+                  </div>
+                  <div class="col-md-3">
+                    <label>District Name</label>
+                    <select name="DistrictName" class="form-control">
+                      <option value="0">Select</option>
+                      <option value="1">Jodhpur</option>
+                      <option value="2">Jaipu</option>
+                      <option value="3">Surat</option>
+                      <option value="4">Gaya</option>
+                    </select>
+                  </div>
+                  <div class="col-md-3">
+                    <label>Village/Taluka</label>
+                    <select name="DistrictName" class="form-control">
+                      <option value="0">Select</option>
+                      <option value="1">Jodhpur</option>
+                      <option value="2">Jaipu</option>
+                      <option value="3">Surat</option>
+                      <option value="4">Gaya</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="d-flex justify-content-between bg-primary pb-1 pt-2 pl-2 pr-2">
+              <div class="btn-panel btn-panel-conversation">
+                <h6 class="ml-1 mt-1"><i class="fa fa-address-card-o mr-1 mt-1"></i>Nominee Guardian Contact Details</h6>
+              </div>
+            </div>
+            <div>
+              <div class="form-group-style">
+                <div class="row">
+                  <div class="col-md-4">
+                    <label>Contact Type</label>
+                    <select name="ContactType" class="form-control">
+                      <option value="0">Select</option>
+                      <option value="1">Mobile Number</option>
+                      <option value="2">Land Line</option>
+                      <option value="3">FAX Number</option>
+                      <option value="4">Email Id</option>
+                    </select>
+                  </div>
+                  <div class="col-md-4">
+                    <label>Contact Details</label>
+                    <div class="input-group">
+                      <span class="input-group-addon"><i class="glyphicon glyphicon-phone"></i></span>
+                      <input type="text" class="mask_phone form-control" value="">
+                    </div>
+                  </div>
+                  <div class="col-md-4">
+                    <label>Relationship</label>
+                    <select name="Relationship1" class="form-control">
+                      <option value="0">Select</option>
+                      <option value="1">Self</option>
+                      <option value="2">Spouse</option>
+                      <option value="3">Dependent Child</option>
+                      <option value="4">Dependent Parent</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+
+          <div class="d-flex justify-content-between bg-primary pb-1 pt-2 pl-2 pr-2">
+            <div class="btn-panel btn-panel-conversation">
+              <h6 class="ml-1 mt-1"><i class="fa fa-address-card-o mr-1 mt-1"></i>Witness Details</h6>
+            </div>
+            <div class="">
+              <div class="btn-panel btn-panel-msg">
+                <input type="radio" name="Verified" id="jDialog_form_button" /><label>Witness Address Details</label>
+                <input type="radio" name="NotVerified" id="collapsedNav" /> <label>Witness Contact Details</label>
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <div class="form-group-style">
+              <div class="row">
+                <div class="col-md-3">
+                  <label>Witness Name:Salutaion</label>
+                  <select class="form-control" required="" style="width:100%">
+                    <option>Mr.</option>
+                    <option>Mrs.</option>
+                    <option>Miss.</option>
+                  </select>
+                </div>
+                <div class="col-md-3">
+                  <label>First Name</label>
+                  <input type="text" class="form-control" placeholder="Enter First Name" required="">
+                </div>
+                <div class="col-md-3">
+                  <label>Middle Name</label>
+                  <input type="text" class="form-control" placeholder="Enter Middle Name" required="">
+                </div>
+                <div class="col-md-3">
+                  <label>Last Name</label>
+                  <input type="text" class="form-control" placeholder="Enter Last Name" required="">
+                </div>
+              </div>
+            </div>
+            <div class="d-flex justify-content-between bg-primary pb-1 pt-2 pl-2 pr-2">
+              <div class="btn-panel btn-panel-conversation">
+                <h6 class="ml-1 mt-1"><i class="fa fa-address-card-o mr-1 mt-1"></i>Nominee Witness Address Details</h6>
+              </div>
+            </div>
+            <div>
+              <div class="form-group-style">
+                <div class="row">
+                  <div class=" col-md-6">
+                    <label>Address-1</label>
+                    <div class="input-group">
+                      <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
+                      <input type="text" class="form-control" placeholder="Enter Address 1 " required>
+                    </div>
+                  </div>
+                  <div class="col-md-3">
+                    <label>Country Name</label>
+                    <select name="CountryName" class="form-control">
+                      <option value="0">Select</option>
+                      <option value="1">India</option>
+                      <option value="2">Bengladesh</option>
+                      <option value="3">Sri Lanka</option>
+                      <option value="4">China</option>
+                    </select>
+                  </div>
+                  <div class="col-md-3">
+                    <label>Country Code</label>
+                    <div class="input-group">
+                      <span class="input-group-addon"><i class="glyphicon glyphicon-map-marker"></i></span>
+                      <input type="number" class="form-control" placeholder="Country Code" required>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group-style">
+                <div class="row">
+                  <div class="col-md-6">
+                    <label>Address-2</label>
+                    <div class="input-group">
+                      <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
+                      <input type="text" class="form-control" placeholder="Enter Address 2 " required>
+                    </div>
+                  </div>
+                  <div class="col-md-3">
+                    <label>State Name</label>
+                    <select name="StateName" class="form-control">
+                      <option value="0">Select</option>
+                      <option value="1">Rajasthan</option>
+                      <option value="2">Gujrat</option>
+                      <option value="3">Maharastra</option>
+                      <option value="4">Bihar</option>
+                    </select>
+                  </div>
+                  <div class="col-md-3">
+                    <label>State Code</label>
+                    <div class="input-group">
+                      <span class="input-group-addon"><i class="glyphicon glyphicon-map-marker"></i></span>
+                      <input type="number" class="form-control" placeholder="State Code" required>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group-style">
+                <div class="row">
+                  <div class="col-md-6">
+                    <label>Address-3</label>
+                    <div class="input-group">
+                      <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
+                      <input type="text" class="form-control" placeholder="Enter Address 3 " required>
+                    </div>
+                  </div>
+                  <div class="col-md-3">
+                    <label>City Name</label>
+                    <select name="CityName" class="form-control">
+                      <option value="0">Select</option>
+                      <option value="1">Jodhpur</option>
+                      <option value="2">Jaipu</option>
+                      <option value="3">Surat</option>
+                      <option value="4">Gaya</option>
+                    </select>
+                  </div>
+                  <div class="col-md-3">
+                    <label>Pin Code</label>
+                    <div class="input-group">
+                      <span class="input-group-addon"><i class="glyphicon glyphicon-map-marker"></i></span>
+                      <input type="number" class="form-control" placeholder="Enter PIN Code" required>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group-style">
+                <div class="row">
+                  <div class="col-md-6">
+                    <label>Landmark</label>
+                    <div class="input-group">
+                      <span class="input-group-addon"><i class="glyphicon glyphicon-bookmark"></i></span>
+                      <input type="text" class="form-control" placeholder="Enter Landmark " required>
+                    </div>
+                  </div>
+                  <div class="col-md-3">
+                    <label>District Name</label>
+                    <select name="DistrictName" class="form-control">
+                      <option value="0">Select</option>
+                      <option value="1">Jodhpur</option>
+                      <option value="2">Jaipu</option>
+                      <option value="3">Surat</option>
+                      <option value="4">Gaya</option>
+                    </select>
+                  </div>
+                  <div class="col-md-3">
+                    <label>Village/Taluka</label>
+                    <select name="DistrictName" class="form-control">
+                      <option value="0">Select</option>
+                      <option value="1">Jodhpur</option>
+                      <option value="2">Jaipu</option>
+                      <option value="3">Surat</option>
+                      <option value="4">Gaya</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="d-flex justify-content-between bg-primary pb-1 pt-2 pl-2 pr-2">
+              <div class="btn-panel btn-panel-conversation">
+                <h6 class="ml-1 mt-1"><i class="fa fa-address-card-o mr-1 mt-1"></i>Nominee Witness Contact Details</h6>
+              </div>
+            </div>
+            <div>
+              <div class="form-group-style">
+                <div class="row">
+                  <div class="col-md-4">
+                    <label>Contact Type</label>
+                    <select name="ContactType" class="form-control">
+                      <option value="0">Select</option>
+                      <option value="1">Mobile Number</option>
+                      <option value="2">Land Line</option>
+                      <option value="3">FAX Number</option>
+                      <option value="4">Email Id</option>
+                    </select>
+                  </div>
+                  <div class="col-md-4">
+                    <label>Contact Details</label>
+                    <div class="input-group">
+                      <span class="input-group-addon"><i class="glyphicon glyphicon-phone"></i></span>
+                      <input type="text" class="mask_phone form-control" value="">
+                    </div>
+                  </div>
+                  <div class="col-md-4">
+                    <label>Relationship</label>
+                    <select name="Relationship1" class="form-control">
+                      <option value="0">Select</option>
+                      <option value="1">Self</option>
+                      <option value="2">Spouse</option>
+                      <option value="3">Dependent Child</option>
+                      <option value="4">Dependent Parent</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+          <div class="d-flex justify-content-between form-group-style pb-1 pt-2">
+            <div class="btn-panel btn-panel-conversation  ml-1">
+              <label class="ml-2">Test</label>
+            </div>
+            <div class="">
+              <div class="btn-panel btn-panel-msg mr-1">
+                <button class="btn btn-sm btn-success mr-1"><span class="glyphicon glyphicon-floppy-save"></span> Save</button>
+                <button class="btn btn-sm btn-info mr-1"><span class="glyphicon glyphicon-edit"></span> Edit</button>
+                <button class="btn btn-sm btn-danger mr-1"><span class="glyphicon glyphicon-trash"></span> Delete</button>
+                <button class="btn btn-sm btn-warning mr-1"><span class="glyphicon glyphicon-refresh"></span> Reset</button>
+              </div>
+            </div>
+          </div>
+          <div class="d-flex justify-content-between bg-primary pb-1 pt-2">
+            <div class="btn-panel btn-panel-conversation">
+              <h6 class="ml-3 mt-1"><i class="fa fa-address-card-o mr-1 mt-1"></i>Customer Nominee Information</h6>
+            </div>
+          </div>
+          <div class="table table-responsive">
+            <table class="table datatable">
+              <thead style="border: 1px solid #CDCDCD; background-color:#F1F1F1">
+                <tr>
+                  <th style="border: 1px solid #CDCDCD">Contact Type</th>
+                  <th style="border: 1px solid #CDCDCD">Contact Details </th>
+                  <th style="border: 1px solid #CDCDCD">Relationship</th>
+                  <th style="border: 1px solid #CDCDCD">Created Date</th>
+                  <th style="border: 1px solid #CDCDCD">Modified Date</th>
+                  <th style="border: 1px solid #CDCDCD">Created By</th>
+                  <th style="border: 1px solid #CDCDCD">Modified By</th>
+                  <th style="border: 1px solid #CDCDCD; width:100px">Actions</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td style="border: 1px solid #CDCDCD">Primary Mobile Number</td>
+                  <td style="border: 1px solid #CDCDCD">91 (967) 222-04-76</td>
+                  <td style="border: 1px solid #CDCDCD">Self</td>
+                  <td style="border: 1px solid #CDCDCD">22-May-2015</td>
+                  <td style="border: 1px solid #CDCDCD">22-May-2016</td>
+                  <td style="border: 1px solid #CDCDCD">934516</td>
+                  <td style="border: 1px solid #CDCDCD">928214</td>
+                  <td style="border: 1px solid #ddd">
+                    <button class="btn btn-info"><span class="fa fa-edit "></span></button>
+                    <button class="btn btn-primary"><span class="fa fa-eye"></span></button>
+                    <button class="btn btn-danger"><span class="fa fa-trash"></span></button>
+                  </td>
+                </tr>
+                <tr>
+                  <td style="border: 1px solid #CDCDCD">Secondary Mobile Number</td>
+                  <td style="border: 1px solid #CDCDCD">91 (967) 222-04-86</td>
+                  <td style="border: 1px solid #CDCDCD">Self</td>
+                  <td style="border: 1px solid #CDCDCD">22-May-2015</td>
+                  <td style="border: 1px solid #CDCDCD">22-May-2016</td>
+                  <td style="border: 1px solid #CDCDCD">934516</td>
+                  <td style="border: 1px solid #CDCDCD">928214</td>
+                  <td style="border: 1px solid #ddd">
+                    <button class="btn btn-info"><span class="fa fa-edit "></span></button>
+                    <button class="btn btn-primary"><span class="fa fa-eye"></span></button>
+                    <button class="btn btn-danger"><span class="fa fa-trash"></span></button>
+                  </td>
+                </tr>
+                <tr>
+                  <td style="border: 1px solid #CDCDCD">Primary Email</td>
+                  <td style="border: 1px solid #CDCDCD">nikhilsinha@rathi.com</td>
+                  <td style="border: 1px solid #CDCDCD">Self</td>
+                  <td style="border: 1px solid #CDCDCD">22-May-2015</td>
+                  <td style="border: 1px solid #CDCDCD">22-May-2016</td>
+                  <td style="border: 1px solid #CDCDCD">934516</td>
+                  <td style="border: 1px solid #CDCDCD">928214</td>
+                  <td style="border: 1px solid #ddd">
+                    <button class="btn btn-info"><span class="fa fa-edit "></span></button>
+                    <button class="btn btn-primary"><span class="fa fa-eye"></span></button>
+                    <button class="btn btn-danger"><span class="fa fa-trash"></span></button>
+                  </td>
+                </tr>
+                <tr>
+                  <td style="border: 1px solid #CDCDCD">Secondary Email</td>
+                  <td style="border: 1px solid #CDCDCD">nikhilhome@rathi.com</td>
+                  <td style="border: 1px solid #CDCDCD">Self</td>
+                  <td style="border: 1px solid #CDCDCD">22-May-2015</td>
+                  <td style="border: 1px solid #CDCDCD">22-May-2016</td>
+                  <td style="border: 1px solid #CDCDCD">934516</td>
+                  <td style="border: 1px solid #CDCDCD">928214</td>
+                  <td style="border: 1px solid #ddd">
+                    <button class="btn btn-info"><span class="fa fa-edit "></span></button>
+                    <button class="btn btn-primary"><span class="fa fa-eye"></span></button>
+                    <button class="btn btn-danger"><span class="fa fa-trash"></span></button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+      <!------------>>
+    </div>
+  </div>

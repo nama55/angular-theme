@@ -1,0 +1,80 @@
+<div class="chat-w" id="srcProviderComponent">
+  <div class="silk-form-wizard" style="box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);">
+
+    <div class="d-flex justify-content-between bg-primary pb-1 pt-1 pl-1 pr-1 ">
+      <!-- For MiniHeading--->
+      <h6 class="ml-2 mt-1"><i class="fa fa-calendar mr-1 mt-1"></i>Event Master</h6>
+      <div class="">
+        <div class="btn-panel btn-panel-msg">
+          <a href="" class="btn  send-message-btn" role="button"><i class="fa fa-gears fa-lg"></i></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="pl-3 pt-3 pb-3 pr-3 bg-white">
+      <div>
+        <div class="d-flex justify-content-between form-group-style pb-1 pt-2">
+
+          <div class="">
+            <button type="button" class="btn btn-outline-primary" [routerLink]="['/business/eventmaster-Add',0]" ><span class="fa fa-user-plus"></span> Add Event</button>
+          </div>
+        </div>
+        <div class="d-flex justify-content-between bg-primary pb-1 pt-2">
+          <div class="btn-panel btn-panel-conversation">
+            <h6 class="ml-3 mt-1"><i class="fa fa-address-card-o mr-1 mt-1"></i>Event Master- Edit/Delete</h6>
+          </div>
+          <!--<div class="">
+            <div class="btn-panel btn-panel-msg">
+              <button class="btn btn-sm btn-info mr-1"><span class="fa fa-user-plus"></span> Add</button>
+            </div>
+          </div>-->
+        </div>
+        <table class="table">
+          <thead style="border: 1px solid #CDCDCD; background-color:#F1F1F1">
+            <tr>
+              <th style="border: 1px solid #CDCDCD">EventID</th>
+              <th style="border: 1px solid #CDCDCD">Event Name</th>
+              <th style="border: 1px solid #CDCDCD">Event Priority</th>
+              <th style="border: 1px solid #CDCDCD">App ID</th>
+              <th style="border: 1px solid #CDCDCD">CH ID</th>
+              <th style="border: 1px solid #CDCDCD">BU ID</th>
+              <th style="border: 1px solid #CDCDCD">Sub BU ID</th>
+              <th style="border: 1px solid #CDCDCD">Event Details</th>
+              <th colspan="3" style="border: 1px solid #CDCDCD">Actions</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td style="border: 1px solid #CDCDCD">EV123</td>
+              <td style="border: 1px solid #CDCDCD">Airtel</td>
+              <td style="border: 1px solid #CDCDCD">123</td>
+              <td style="border: 1px solid #CDCDCD">AR021</td>
+              <td style="border: 1px solid #CDCDCD">In-Active</td>
+              <td style="border: 1px solid #CDCDCD">http://www.airtel.com</td>
+              <td style="border: 1px solid #CDCDCD">Send Grid</td>
+              <td style="border: 1px solid #CDCDCD">xxxxxxxxxx</td>
+              <td colspan="3" style="border: 1px solid #ddd">
+                <button class="btn btn-info" [routerLink]="['/business/eventmaster-Add',1]"><span class="fa fa-edit "></span></button>
+                <button class="btn btn-danger"><span class="fa fa-trash"></span></button>
+              </td>
+            </tr>
+            <tr>
+              <td style="border: 1px solid #CDCDCD">EV124</td>
+              <td style="border: 1px solid #CDCDCD">Jio</td>
+              <td style="border: 1px solid #CDCDCD">1900</td>
+              <td style="border: 1px solid #CDCDCD">123</td>
+              <td style="border: 1px solid #CDCDCD">Active</td>
+              <td style="border: 1px solid #CDCDCD">http://</td>
+              <td style="border: 1px solid #CDCDCD">Send Grid</td>
+              <td style="border: 1px solid #CDCDCD">Xxxxxx</td>
+              <td colspan="3" style="border: 1px solid #ddd">
+                <button class="btn btn-info" [routerLink]="['/business/eventmaster-Add',2]"><span class="fa fa-edit "></span></button>
+                <button class="btn btn-danger"><span class="fa fa-trash"></span></button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+    </div>

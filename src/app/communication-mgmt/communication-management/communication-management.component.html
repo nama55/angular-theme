@@ -1,0 +1,122 @@
+<div class="chat-w" id="communicationmgmtComponent">
+  <div class="silk-form-wizard" style="box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);">
+
+    <div class="d-flex justify-content-between bg-primary pb-1 pt-1 pl-1 pr-1 ">
+      <!-- For MiniHeading--->
+      <h6 class="ml-2 mt-1"><i class="fa fa-comments-o mr-1 mt-1"></i>Communication Management</h6>
+      <div class="">
+        <div class="btn-panel btn-panel-msg">
+          <!--<a href="" class="btn  send-message-btn" role="button"><i class="fa fa-gears fa-lg"></i></a>-->
+        </div>
+      </div>
+    </div>
+    <div class="pl-3 pt-3 pb-3 pr-3 bg-white">
+      <div class="form-group-style">
+        <div class="row">
+          <div class="col-md-4">
+            <label class="font-weight-bold">Application</label>
+            <select name="archivalMSTAppType" id="commMgmtAppType" class="form-control">
+              <option value="0">Select</option>
+              <option value="1">ARCCC</option>
+              <option value="2">Kuber</option>
+              <option value="3">Hadoop</option>
+              <option value="4">DWM</option>
+            </select>
+          </div>
+          <div class="col-md-4">
+            <label class="font-weight-bold">Communication Status Type</label>
+            <select name="archivalMSTAppType" id="commMgmtCommunicationStatus" class="form-control">
+              <option value="0">Select</option>
+              <option value="1">View Communication Queue</option>
+              <option value="2">View Scheduled Communication</option>
+              <option value="3">View Dispatched Communication</option>
+              <option value="1">View Failed Communication</option>
+            </select>
+          </div>
+
+          <div class="col-md-4">
+            <label class="font-weight-bold">Channel Selection</label>
+            <ng-multiselect-dropdown [placeholder]="'Channel Selection'"
+                                     [data]="dropdownList"
+                                     [(ngModel)]="selectedItems"
+                                     [settings]="dropdownSettings"
+                                     (onSelect)="onItemSelect($event)"
+                                     (onSelectAll)="onSelectAll($event)">
+            </ng-multiselect-dropdown>
+          </div>
+        </div>
+      </div>
+      <div class="form-group-style">
+        <div class="row">
+          <div class="col-md-4">
+            <label class="font-weight-bold">Start Date</label>
+            <div class="input-group">
+              <span class="input-group-addon">From</span>
+              <input type="text" class="form-control" placeholder="Start Date" id="commMgmtStartDate" name="commMgmtStartDate" required>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <label class="font-weight-bold">End Date</label>
+            <div class="input-group">
+              <span class="input-group-addon">To</span>
+              <input type="text" class="form-control" placeholder="End Date" id="commMgmtEndDate" name="commMgmtEndDate" required>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+      <div class="d-flex justify-content-between form-group-style pb-1 pt-2">
+
+        <div class="">
+
+        </div>
+      </div>
+      <div class="d-flex justify-content-between bg-primary pb-1 pt-2">
+        <div class="btn-panel btn-panel-conversation">
+          <h6 class="ml-3 mt-1"><i class="fa fa-address-card-o mr-1 mt-1"></i>Messages Details</h6>
+        </div>
+      </div>
+      <table class="table">
+        <thead style="border: 1px solid #CDCDCD; background-color:#F1F1F1">
+          <tr>
+            <th style="border: 1px solid #CDCDCD">Message Unique ID</th>
+            <th style="border: 1px solid #CDCDCD">Message Corresponding Application</th>
+            <th style="border: 1px solid #CDCDCD">Message Channel</th>
+            <th style="border: 1px solid #CDCDCD">Message Service Provider</th>
+            <th style="border: 1px solid #CDCDCD">Column 5</th>
+            <th style="border: 1px solid #CDCDCD">Column 6</th>
+            <th style="border: 1px solid #CDCDCD">Column 7</th>
+            <th style="border: 1px solid #CDCDCD" colspan="2">Details</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td style="border: 1px solid #CDCDCD">MSG1024545</td>
+            <td style="border: 1px solid #CDCDCD">Value</td>
+            <td style="border: 1px solid #CDCDCD">Value</td>
+            <td style="border: 1px solid #CDCDCD">Value</td>
+            <td style="border: 1px solid #CDCDCD">Value</td>
+            <td style="border: 1px solid #CDCDCD">Value</td>
+            <td style="border: 1px solid #CDCDCD">Value</td>
+            <td style="border: 1px solid #ddd" colspan="2">
+              
+              <button class="btn btn-info" (click)="showDialog = !showDialog;popuopenvalue()" ><span class="fa fa-info "></span></button>
+              
+              <app-details-popup [(visible)]="showDialog" [(headerOfDetailsPopup)]=PopupheaderName [(bodyDataDetailsPopup)]=detailsObjectsOfTable>
+                <!--<h3>Details Report</h3>
+                    <button (click)="showDialog = !showDialog" class="btn">Close</button>-->
+              </app-details-popup>
+
+            </td>
+          </tr>
+          
+        </tbody>
+      </table>
+    </div>
+
+
+
+
+    </div>
+  </div>

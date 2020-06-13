@@ -1,0 +1,84 @@
+<div class="chat-w" id="srcProviderComponent">
+  <div class="silk-form-wizard" style="box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);">
+
+    <div class="d-flex justify-content-between bg-primary pb-1 pt-1 pl-1 pr-1 ">
+      <!-- For MiniHeading--->
+      <h6 class="ml-2 mt-1"><i class="fa fa-user-plus mr-1 mt-1"></i>Service Provider</h6>
+      <div class="">
+        <div class="btn-panel btn-panel-msg">
+          <a href="" class="btn  send-message-btn" role="button"><i class="fa fa-gears fa-lg"></i></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="pl-3 pb-3 pr-3 bg-white">
+      <!--pt-3-->
+      <div>
+        <div class="d-flex justify-content-between form-group-style pb-1 pt-2">
+
+          <div class="">
+            <button type="button" class="btn btn-outline-primary" [routerLink]="['/ConfigurationSettings/serviceprovider-add',0]"><span class="fa fa-calendar-plus-o"></span> Add Service Provider</button>
+          </div>
+        </div>
+        <div class="d-flex justify-content-between bg-primary pb-1 pt-2">
+          <div class="btn-panel btn-panel-conversation">
+            <h6 class="ml-3 mt-1"><i class="fa fa-address-card-o mr-1 mt-1"></i>Service Provider- Edit/Delete</h6>
+          </div>
+        </div>
+        <table class="table">
+          <thead style="border: 1px solid #CDCDCD; background-color:#F1F1F1">
+            <tr>
+              <th style="border: 1px solid #CDCDCD">SP ID</th>
+              <th style="border: 1px solid #CDCDCD">SP Name</th>
+              <th style="border: 1px solid #CDCDCD">Channel ID</th>
+              <th style="border: 1px solid #CDCDCD">App ID</th>
+              <th style="border: 1px solid #CDCDCD">SP Status</th>
+              <th style="border: 1px solid #CDCDCD">SP URL</th>
+              <th style="border: 1px solid #CDCDCD">SP Name</th>
+              <th style="border: 1px solid #CDCDCD">SP Password</th>
+              <th style="border: 1px solid #CDCDCD">SP Contact Details</th>
+              <th style="border: 1px solid #CDCDCD">SP Priority</th>
+              <th style="border: 1px solid #CDCDCD" colspan="2" >Actions</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let serviceProvider of serviceProviderdata" >
+              <td style="border: 1px solid #CDCDCD">{{serviceProvider.serviceproviderid}}</td>
+              <td style="border: 1px solid #CDCDCD">{{serviceProvider.serviceprovidername}}</td>
+              <td style="border: 1px solid #CDCDCD">{{serviceProvider.channelid}}</td>
+              <td style="border: 1px solid #CDCDCD">{{serviceProvider.serviceproviderdescription}}</td>
+              <td style="border: 1px solid #CDCDCD">{{serviceProvider.serviceproviderstatus?'Active':'InActive'}}</td>
+              <td style="border: 1px solid #CDCDCD">{{serviceProvider.serviceproviderurl}}</td>
+              <td style="border: 1px solid #CDCDCD">{{serviceProvider.serviceprovideruserid}}</td>
+              <td style="border: 1px solid #CDCDCD">{{serviceProvider.serviceproviderpassword}}</td>
+              <td style="border: 1px solid #CDCDCD">{{serviceProvider.serviceprovidercontactnumber}}</td>
+              <td style="border: 1px solid #CDCDCD">{{serviceProvider.serviceproviderpriority}}</td>
+              <td style="border: 1px solid #ddd" colspan="2">
+                <button class="btn btn-info" [routerLink]="['/ConfigurationSettings/serviceprovider-add',serviceProvider.serviceproviderid]"><span class="fa fa-edit "></span></button>
+                <!--<button class="btn btn-primary"><span class="fa fa-eye"></span></button>-->
+                <button class="btn btn-danger" (click)="deleteServiceProvider(serviceProvider.serviceproviderid)"><span class="fa fa-trash"></span></button>
+              </td>
+            </tr>
+            <!-- <tr>
+              <td style="border: 1px solid #CDCDCD">ARCS0001</td>
+              <td style="border: 1px solid #CDCDCD">Jio</td>
+              <td style="border: 1px solid #CDCDCD">1900</td>
+              <td style="border: 1px solid #CDCDCD">123</td>
+              <td style="border: 1px solid #CDCDCD">Active</td>
+              <td style="border: 1px solid #CDCDCD">http://</td>
+              <td style="border: 1px solid #CDCDCD">Send Grid</td>
+              <td style="border: 1px solid #CDCDCD">Xxxxxx</td>
+              <td style="border: 1px solid #CDCDCD">Maharastra</td>
+              <td style="border: 1px solid #CDCDCD">1</td>
+              <td style="border: 1px solid #ddd; width:12%" colspan="2">
+                <button class="btn btn-info" [routerLink]="['/ConfigurationSettings/serviceprovider-add',2]"><span class="fa fa-edit "></span></button>
+                //<button class="btn btn-info"><span class="fa fa-eye"></span></button>
+                <button class="btn btn-danger"><span class="fa fa-trash"></span></button>
+              </td>
+            </tr> -->
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,57 @@
+<div class="chat-w" id="templateMasterComponent">
+  <div class="silk-form-wizard" style="box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);">
+
+    <div class="d-flex justify-content-between bg-primary pb-1 pt-1 pl-1 pr-1 ">
+      <!-- For MiniHeading--->
+      <h6 class="ml-2 mt-1"><i class="fa fa-calendar mr-1 mt-1"></i>Archival Master</h6>
+      <div class="">
+        <div class="btn-panel btn-panel-msg">
+          <a href="" class="btn  send-message-btn" role="button"><i class="fa fa-gears fa-lg"></i></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="pl-3 pt-3 pb-3 pr-3 bg-white">
+      <form [formGroup]="archivalMstForm" autocomplete="off" novalidate (ngSubmit)="createArchival(archivalMstForm.value)">
+        <div class="form-group-style">
+          <div class="row">
+            <div class="col-md-4">
+              <label class="font-weight-bold">Application</label>
+              <select name="archivalMSTAppType" id="archivalMSTAppType" formControlName="archivalMstApplication" class="form-control">
+                <option value="0">Select</option>
+                <option value="1">ARCCC</option>
+                <option value="2">Kuber</option>
+                <option value="3">Hadoop</option>
+              </select>
+            </div>
+            <div class="col-md-4">
+              <label class="font-weight-bold">Event</label>
+              <select name="archivalMSTEventType" id="archivalMSTEventType" formControlName="archivalMstEvent" class="form-control">
+                <option value="0">Select</option>
+                <option value="1">Event 1</option>
+                <option value="2">Event 2</option>
+                <option value="3">Event 3</option>
+              </select>
+            </div>
+            <div class="col-md-4">
+              <label class="font-weight-bold">Archival Date</label>
+              <div class="input-group">
+                <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                <input type="number" class="form-control" formControlName="archivalMstDate" placeholder="Archival Date" id="archivalMSTArchivalDate" name="archivalMSTArchivalDate" min="0" max="9999" required><span>Days</span>
+              </div>
+
+            </div>
+
+          </div>
+        </div>
+
+        <div class="btn-panel btn-panel-msg mr-1" style="margin-top:2%;">
+          <button type="submit" class="btn btn-sm btn-success mr-1" [disabled]="!archivalMstForm.valid"><span class="glyphicon glyphicon-floppy-save"></span> Save</button>
+          <button type="reset" class="btn btn-sm btn-warning mr-1"><span class="glyphicon glyphicon-refresh"></span> Reset</button>
+        </div>
+      </form>
+</div>
+
+
+    </div>
+  </div>

@@ -1,0 +1,68 @@
+<div class="chat-w" id="templateMasterComponent">
+  <div class="silk-form-wizard" style="box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);">
+
+    <div class="d-flex justify-content-between bg-primary pb-1 pt-1 pl-1 pr-1 ">
+      <!-- For MiniHeading--->
+      <h6 class="ml-2 mt-1"><i class="fa fa-calendar mr-1 mt-1"></i>Channel Master</h6>
+      <div class="">
+        <div class="btn-panel btn-panel-msg">
+          <a href="" class="btn  send-message-btn" role="button"><i class="fa fa-gears fa-lg"></i></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="pl-3 pb-3 pr-3 bg-white">
+      <!--pt-3-->
+      <div>
+        <div class="d-flex justify-content-between form-group-style pb-1 pt-2">
+
+          <div class="">
+            <button type="button" class="btn btn-outline-primary" [routerLink]="['/business/channelmaster-Add',0]"><span class="fa fa-calendar-plus-o"></span> Add Channel</button>
+          </div>
+        </div>
+        <div class="d-flex justify-content-between bg-primary pb-1 pt-2">
+          <div class="btn-panel btn-panel-conversation">
+            <h6 class="ml-3 mt-1"><i class="fa fa-address-card-o mr-1 mt-1"></i>Channel Master- Edit/Delete</h6>
+          </div>
+          <!--<div class="">
+            <div class="btn-panel btn-panel-msg">
+              <button class="btn btn-sm btn-info mr-1"><span class="fa fa-user-plus"></span> Add</button>
+            </div>
+          </div>-->
+        </div>
+        <table class="table">
+          <thead style="border: 1px solid #CDCDCD; background-color:#F1F1F1">
+            <tr>
+              <th style="border: 1px solid #CDCDCD">Channel ID</th>
+              <th style="border: 1px solid #CDCDCD">Channel Name</th>
+              <th style="border: 1px solid #CDCDCD">Channel Status</th>
+              <th style="border: 1px solid #CDCDCD">SP ID</th>
+              <th style="border: 1px solid #CDCDCD">Max Retry</th>
+              <th style="border: 1px solid #CDCDCD">Time Delay Max</th>
+              <th style="border: 1px solid #CDCDCD">Time Delay Min</th>
+              <th style="border: 1px solid #CDCDCD">Action on fail</th>
+              <th style="width:10%; border: 1px solid #CDCDCD">Actions</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let channelMaster of channelMasterdata">
+              <td style="border: 1px solid #CDCDCD">{{channelMaster.channelid}}</td>
+              <td style="border: 1px solid #CDCDCD">{{channelMaster.channelname}}</td>
+              <td style="border: 1px solid #CDCDCD">{{channelMaster.channelstatus=='1'?'Active':InActive}}</td>
+              <td style="border: 1px solid #CDCDCD">{{channelMaster.serviceproviderslist}}</td>
+              <td style="border: 1px solid #CDCDCD">{{channelMaster.maxretryattempts}}</td>
+              <td style="border: 1px solid #CDCDCD">{{channelMaster.timedelay}}</td>
+              <td style="border: 1px solid #CDCDCD">{{channelMaster.timedelay}}</td>
+              <td style="border: 1px solid #CDCDCD">{{channelMaster.actiontaken}}</td>
+              <td colspan="3" style="border: 1px solid #ddd">
+                <button class="btn btn-info" [routerLink]="['/business/channelmaster-Add',channelMaster.channelid]"><span class="fa fa-edit "></span></button>
+                <button class="btn btn-danger" (click)="deleteChannel(channelMaster.channelid)" ><span class="fa fa-trash"></span></button>
+              </td>
+            </tr>
+
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>

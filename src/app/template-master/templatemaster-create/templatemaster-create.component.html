@@ -1,0 +1,247 @@
+<div class="chat-w" id="srcProviderComponent">
+  <div class="silk-form-wizard" style="box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);">
+
+    <div class="d-flex justify-content-between bg-primary pb-1 pt-1 pl-1 pr-1 ">
+      <!-- For MiniHeading--->
+      <h6 class="ml-2 mt-1"><i class="fa fa-user-plus mr-1 mt-1"></i>Template-Master</h6>
+      <div class="">
+        <div class="btn-panel btn-panel-msg">
+          <a href="" class="btn  send-message-btn" role="button"><i class="fa fa-gears fa-lg"></i></a>
+        </div>
+      </div>
+    </div>
+
+    <!------>
+    <div class="pl-3 pt-3 pb-3 pr-3 bg-white">
+
+
+      <div>
+        <div class="d-flex justify-content-between bg-primary pb-1 pt-2 pl-2 pr-2">
+          <div class="btn-panel btn-panel-conversation">
+            <h6 class="ml-1 mt-1"><i class="fa fa-address-card-o mr-1 mt-1"></i>{{templateFormLabelName}}</h6>
+          </div>
+
+        </div>
+        <form [formGroup]="templateMasterForm" autocomplete="off" novalidate (ngSubmit)="createTemplate(templateMasterForm.value)">
+          <div>
+            <div class="form-group-style">
+
+
+              <div class="row">
+
+                <div class="col-md-6">
+                  <label for="staticEmail" class="col-form-label font-weight-bold">Template ID</label>
+
+                  <input type="text" readonly class="form-control-plaintext" id="templateID" formControlName="templateID">
+
+                </div>
+                <div class=" col-md-6">
+                  <label class="font-weight-bold">Template Name</label>
+                  <div class="input-group">
+                    <span class="input-group-addon"><i class="glyphicon glyphicon-grain"></i></span>
+                    <input type="text" class="form-control" placeholder="Template Name" formControlName="templatename" id="templateName" name="templatename" required>
+                  </div>
+                  <div class="input-group">
+                    <em style="color:red" *ngIf="validateControl('templatename') && hasError('templatename', 'required');else ErrorTemplateForBlankSpace">Template Name is required</em>
+                    <em style="color:red" *ngIf="validateControl('templatename') && hasError('templatename', 'maxlength')">Maximum allowed length is 20 characters.</em>
+                  </div>
+                </div>
+
+
+              </div>
+            </div>
+            <div class="form-group-style">
+              <div class="row">
+
+
+
+                <div class="col-md-6">
+                  <label class="font-weight-bold">Channel Type</label>
+                  <select name="templateChannelType" id="templateChannelType" formControlName="templateChannelType" id="templateChannelType" class="form-control">
+                    <option value="0">Select</option>
+                    <option *ngFor="let channel of channelType" [value]="channel.channelid">{{channel.channelname}}</option>
+                  </select>
+                  <div class="input-group">
+                    <em>&nbsp;</em>
+                  </div>
+                </div>
+
+                <div class="col-md-6">
+                  <label class="font-weight-bold">Template Status</label>
+                  <select name="TemplateStatus" id="templateStatus" formControlName="templateStatus" class="form-control">
+                    <option value="0">Select</option>
+                    <option value="1">Active</option>
+                    <option value="2">In-Active</option>
+                  </select>
+
+                  <div class="input-group">
+                    <em>&nbsp;</em>
+                  </div>
+                </div>
+
+                <div class="col-md-6">
+                  <label class="font-weight-bold">Template Purpose</label>
+                  <div class="input-group">
+                    <span class="input-group-addon"><i class="glyphicon glyphicon-italic"></i></span>
+                    <input type="text" class="form-control" placeholder="Template Purpose" id="templatePurpose" name="templatePurpose" formControlName="templatePurpose" >
+                  </div>
+                  <div class="input-group">
+                    <em>&nbsp;</em>
+                  </div>
+                </div>
+
+                <div class="col-md-6">
+                    <label class="font-weight-bold">Attachments</label>
+                    <div class="input-group">
+                      <input type="file" class="custom-file-input"  id="templateAttachments"  formControlName="templateAttachments" (change)="onAttachmentChange($event)" >
+                      <label class="custom-file-label" for="templateAttachments" >{{attachmentfilepath}}</label>
+                      <div class="invalid-feedback">Example invalid custom file feedback</div>
+                    </div>
+                </div>
+
+                  <div class="col-md-6">
+                    <label class="font-weight-bold">Replacement String</label>
+                    <div class="input-group">
+                      <span class="input-group-addon"><i class="glyphicon glyphicon-italic"></i></span>
+                      <input type="text" class="form-control" placeholder="Replacement String" id="templateReplacString" (change)="onAttachmentPreview($event)" name="templateReplacString" formControlName="templateReplaceString" required>
+                    </div>
+                    <div class="input-group">
+                      <em>&nbsp;</em>
+                    </div>
+                  </div>
+                  
+                  <div class="col-md-6">
+                      <label class="font-weight-bold">CSV Parameters</label>
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="CSV Parameters" id="templateCSVParameters" (change)="onAttachmentPreview($event)" name="templateCSVParameters" formControlName="templateCSVParameters" required>
+                      <span class="input-group-btn">
+                          <button class="btn btn-outline-info" type="button" [disabled]="disablePreview" (click)="onAttachmentPreview($event)">Preview</button>
+                      </span>
+                    </div>
+                    <div class="input-group">
+                      <em>&nbsp;</em>
+                    </div>
+                 </div>
+
+              <fieldset *ngIf="mailbodyshow" class="scheduler-border">
+                <legend class="scheduler-border">Preview</legend>
+                  <div class="form-group-style">
+                      <div class="row" style="padding: 1%;" [innerHTML]="Previewhtmldata">
+                      
+                    </div>
+                  </div>
+                </fieldset>
+                <!-- <div class="col-md-6">
+                  <label class="font-weight-bold">Service Provider ID</label>
+                  <div class="input-group">
+                    <span class="input-group-addon"><i class="glyphicon glyphicon-italic"></i></span>
+                    <input type="text" class="form-control" placeholder="Service Provider ID" id="templatesrcProviderID" name="templatesrcProviderID" required>
+                  </div>
+
+                </div> -->
+
+              </div>
+            </div>
+
+            <!-- <div class="form-group-style">
+              <div class="row">
+                <div class="col-md-6">
+                  <label class="font-weight-bold">Channel ID's</label>
+                  <div class="input-group">
+                    <span class="input-group-addon"><i class="glyphicon glyphicon-italic"></i></span>
+                    <input type="text" class="form-control" formControlName="templatechannelid" placeholder="Channel ID's" id="templateChannelID" name="templateChannelID" required>
+                  </div>
+                  <div class="input-group">
+                    <em style="color:red" *ngIf="validateControl('templatechannelid') && hasError('templatechannelid', 'required');else ErrorTemplateForBlankSpace">Template ChannelID is required</em>
+                  </div>
+                </div>
+
+
+
+              </div>
+            </div> -->
+            
+            <!-- <fieldset class="scheduler-border">
+              <legend class="scheduler-border">Optional</legend>
+              <div class="form-group-style">
+
+                <div class="row">
+                  <div class="col-md-6">
+                    <label class="font-weight-bold">Subject</label>
+                    <div class="input-group">
+                      <span class="input-group-addon"><i class="glyphicon glyphicon-italic"></i></span>
+                      <input type="text" class="form-control" placeholder="Subject" formControlName="templatesubject" id="templateSubject" name="TemplateSubject" required>
+                    </div>
+                    <div class="input-group">
+                      <em style="color:red" *ngIf="validateControl('templatesubject') && hasError('templatesubject', 'required');else ErrorTemplateForBlankSpace">Template Subject is required</em>
+                      
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <label class="font-weight-bold">Body</label>
+                    <div class="input-group">
+                      <span class="input-group-addon"><i class="glyphicon glyphicon-italic"></i></span>
+                      <input type="text" class="form-control" placeholder="Body" formControlName="templatebody" id="templateBody" name="TemplateBody" required>
+                    </div>
+                    <div class="input-group">
+                      <em style="color:red" *ngIf="validateControl('templatebody') && hasError('templatebody', 'required');else ErrorTemplateForBlankSpace">Template Body is required</em>
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-4">
+                    <label class="font-weight-bold">To</label>
+                    <div class="input-group">
+                      <span class="input-group-addon">@</span>
+                      <input type="text" class="form-control" placeholder="To" formControlName="templateto" id="templateTo" name="TemplateSubject" required>
+                    </div>
+                    <div class="input-group">
+                      <em style="color:red" *ngIf="validateControl('templateto') && hasError('templateto', 'required');else ErrorTemplateForBlankSpace">To is required</em>
+                    </div>
+                  </div>
+                  <div class="col-md-4">
+                    <label class="font-weight-bold">CC</label>
+                    <div class="input-group">
+                      <span class="input-group-addon">@</span>
+                      <input type="text" class="form-control" placeholder="CC" id="templateCC" name="TemplateBody" required>
+                    </div>
+                  </div>
+                  <div class="col-md-4">
+                    <label class="font-weight-bold">BCC</label>
+                    <div class="input-group">
+                      <span class="input-group-addon">@</span>
+                      <input type="text" class="form-control" placeholder="BCC" id="templateBCC" name="TemplateBody" required>
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+
+
+                  <div class="col-md-12">
+                    <label class="font-weight-bold">Attachments</label>
+                    <div class="input-group">
+                      <input type="file" class="custom-file-input" id="validatedCustomFile" required>
+                      <label class="custom-file-label" for="validatedCustomFile">Choose file...</label>
+                      <div class="invalid-feedback">Example invalid custom file feedback</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </fieldset> -->
+
+            <ng-template #ErrorTemplateForBlankSpace>&nbsp;</ng-template>
+
+            <div class="btn-panel btn-panel-msg mr-1" style="margin-top:2%;">
+              <button type="submit" class="btn btn-sm btn-success mr-1" [disabled]="!templateMasterForm.valid"><span class="glyphicon glyphicon-floppy-save"></span> Create</button>
+              <button type="reset" class="btn btn-sm btn-warning mr-1"><span class="glyphicon glyphicon-refresh"></span> Reset</button>
+              <button class="btn btn-sm btn-danger mr-1" [routerLink]="['/business/template-master']"><span class="glyphicon glyphicon-remove"></span> Cancel</button>
+            </div>
+          </div>
+          </form>
+</div>
+
+    </div>
+  </div>
+
+
+

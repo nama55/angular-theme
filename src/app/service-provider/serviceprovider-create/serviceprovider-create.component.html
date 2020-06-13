@@ -1,0 +1,163 @@
+<div class="chat-w" id="srcProviderComponent">
+  <div class="silk-form-wizard" style="box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);">
+
+    <div class="d-flex justify-content-between bg-primary pb-1 pt-1 pl-1 pr-1 ">
+      <!-- For MiniHeading--->
+      <h6 class="ml-2 mt-1"><i class="fa fa-user-plus mr-1 mt-1"></i>Service Provider</h6>
+      <div class="">
+        <div class="btn-panel btn-panel-msg">
+          <a href="" class="btn  send-message-btn" role="button"><i class="fa fa-gears fa-lg"></i></a>
+        </div>
+      </div>
+    </div>
+
+    <!------>
+    <div class="pl-3 pt-3 pb-3 pr-3 bg-white">
+      <div>
+        <div class="d-flex justify-content-between bg-primary pb-1 pt-2 pl-2 pr-2">
+          <div class="btn-panel btn-panel-conversation">
+            <h6 class="ml-1 mt-1"><i class="fa fa-address-card-o mr-1 mt-1"></i>{{srcProviderFormLabelName}}</h6>
+          </div>
+
+        </div>
+        <form [formGroup]="srcProviderForm" autocomplete="off" novalidate (ngSubmit)="createServiceProvider(srcProviderForm.value)">
+          <div>
+            <div class="form-group-style">
+              <div class="row">
+                <!--<div class="input-group" style="margin: 0% 0% 0% 30%;">
+                  <div class="btn-panel btn-panel-conversation  ml-1">
+                    <label class="mr-2">Mail</label><span class="btn btn-sm btn-default "><input type="checkbox" name="NotVerified" id="svcProviderMail" /></span>
+                    <label class="mr-2">SMS</label><span class="btn btn-sm btn-default "><input type="checkbox" name="NotVerified" id="svcProviderSMS" /></span>
+                    <label class="mr-2">Push Notification</label><span class="btn btn-sm btn-default "><input type="checkbox" name="NotVerified" id="svcProviderPushNot" /></span>
+                  </div>
+                </div>-->
+
+                <div class="col-md-6">
+                  <label class="font-weight-bold">Message Type</label>
+                  <select  name="ServiceProviderMessagetype" id="SrcProviderChannel" formControlName="SrcProviderChannel" id="SrcProviderStatusMessagetype" class="form-control">
+                    <option value="0">Select</option>
+                    <option *ngFor="let channel of channelType" [value]=channel.channelid>{{channel.channelname}}</option>
+                    
+                  </select>
+                </div>
+              </div>
+
+              <div class="row">
+
+                <div class="col-md-6">
+                  <label for="staticEmail" class="col-form-label font-weight-bold">Service Provider ID</label>
+
+                  <input type="text" readonly class="form-control-plaintext" id="SrcProviderID" formControlName="SrcProviderID">
+
+                </div>
+                <div class=" col-md-6">
+                  <label class="font-weight-bold">Service Provider Name</label>
+                  <div class="input-group">
+                    <span class="input-group-addon"><i class="glyphicon glyphicon-grain"></i></span>
+                    <input type="text" class="form-control" placeholder="Service Provider Name" formControlName="SrcProviderName" id="SrcProviderName" name="name" required>
+                  </div>
+                  <div class="input-group">
+                    <em style="color:red" *ngIf="validateControl('SrcProviderName') && hasError('SrcProviderName', 'required');else ErrorServiceProviderForBlankSpace">Service Provider Name is required</em>
+                    <em style="color:red" *ngIf="validateControl('SrcProviderName') && hasError('SrcProviderName', 'maxlength')">Maximum allowed length is 20 characters.</em>
+                  </div>
+                </div>
+
+
+              </div>
+            </div>
+            <div class="form-group-style">
+              <div class="row">
+                <div class="col-md-6">
+                  <label class="font-weight-bold">Service Provider Status</label>
+                  <select name="ServiceProviderStatus" id="srcProviderStatus" formControlName="srcProviderStatus" class="form-control">
+                    <option value="0">Select</option>
+                    <option value="1">Active</option>
+                    <option value="2">In-Active</option>
+                  </select>
+                </div>
+                <div class="col-md-6">
+                  <label class="font-weight-bold">Service Provider URL</label>
+                  <div class="input-group">
+                    <span class="input-group-addon"><i class="glyphicon glyphicon-link"></i></span>
+                    <input type="text" class="form-control" placeholder="Service Provider URL" formControlName="SrcProviderUrl" id="SrcProviderUrl" name="url" required>
+                  </div>
+                  <div class="input-group">
+                    <em style="color:red" *ngIf="validateControl('SrcProviderUrl') && hasError('SrcProviderUrl', 'required');else ErrorServiceProviderForBlankSpace">Service Provider URL is required</em>
+                  </div>
+                </div>
+
+
+              </div>
+            </div>
+            <div class="form-group-style">
+              <div class="row">
+                <div class="col-md-6">
+                  <label class="font-weight-bold">Service Provider UserName</label>
+                  <div class="input-group">
+                    <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                    <input type="text" class="form-control" placeholder="Service Provider UserName" formControlName="SrcProviderUserName" id="SrcProviderUserName" name="username" required>
+                  </div>
+                  <div class="input-group">
+                    <em style="color:red" *ngIf="validateControl('SrcProviderUserName') && hasError('SrcProviderUserName', 'required');else ErrorServiceProviderForBlankSpace">Service Provider UserName is required</em>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <label class="font-weight-bold">Service Provider Password</label>
+                  <div class="input-group">
+                    <span class="input-group-addon"><i class="glyphicon glyphicon-qrcode"></i></span>
+                    <input type="password" class="form-control" placeholder="Service Provider Password" formControlName="SrcProviderUserpass" id="SrcProviderUserpass" name="userpass" required>
+                  </div>
+                  <div class="input-group">
+                    <em style="color:red" *ngIf="validateControl('SrcProviderUserpass') && hasError('SrcProviderUserpass', 'required');else ErrorServiceProviderForBlankSpace">Service Provider User Password is required</em>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="form-group-style">
+              <div class="row">
+                <div class="col-md-6">
+                  <label class="font-weight-bold">Contact Name and Details</label>
+                  <div class="input-group">
+                    <span class="input-group-addon"><i class="glyphicon glyphicon-phone"></i></span>
+                    <input type="text" class="form-control" placeholder="Contact Name and Details" formControlName="SrcProviderContactnumber" id="SrcProviderContNameDt"  name="contnamedt" maxlength="10" >
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <label class="font-weight-bold">Service Provider Priority #</label>
+                  <div class="input-group">
+                    <span class="input-group-addon"><i class="glyphicon glyphicon-signal"></i></span>
+                    <input type="text" class="form-control" placeholder="Service Provider Priority #" formControlName="SrcProviderPriority" id="SrcProviderPriority" name="priority" required>
+                  </div>
+                  <div class="input-group">
+                    <em style="color:red" *ngIf="validateControl('SrcProviderPriority') && hasError('SrcProviderPriority', 'required');else ErrorServiceProviderForBlankSpace">Please Set Priority</em>
+                  </div>
+                </div>
+                <div class="col-md-12">
+                  <label class="font-weight-bold">Service Provider Description</label>
+                  <div class="input-group">
+                    <span class="input-group-addon"><i class="glyphicon glyphicon-phone"></i></span>
+                    <input type="text" class="form-control" placeholder="Service Provider Description" formControlName="SrcProviderDescription" id="SrcProviderDescription"  name="Description" maxlength="50" >
+                  </div>
+                </div>
+
+
+              </div>
+            </div>
+            <div class="btn-panel btn-panel-msg mr-1" style="margin-top:2%;">
+              <button type="submit" class="btn btn-sm btn-success mr-1" [disabled]="!srcProviderForm.valid"><span class="glyphicon glyphicon-floppy-save"></span> Create</button>
+              <button type="reset" class="btn btn-sm btn-warning mr-1"><span class="glyphicon glyphicon-refresh"></span> Reset</button>
+              <button class="btn btn-sm btn-danger mr-1" [routerLink]="['/ConfigurationSettings/service-provider']"><span class="glyphicon glyphicon-remove"></span> Cancel</button>
+            </div>
+          </div>
+
+          <ng-template #ErrorServiceProviderForBlankSpace>&nbsp;</ng-template>
+        </form>
+      </div>
+
+
+
+
+      <!------------>
+    </div>
+  </div>
+

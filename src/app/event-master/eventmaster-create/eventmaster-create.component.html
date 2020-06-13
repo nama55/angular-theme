@@ -1,0 +1,142 @@
+<div class="chat-w" id="srcProviderComponent">
+  <div class="silk-form-wizard" style="box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);">
+
+    <div class="d-flex justify-content-between bg-primary pb-1 pt-1 pl-1 pr-1 ">
+      <!-- For MiniHeading--->
+      <h6 class="ml-2 mt-1"><i class="fa fa-user-plus mr-1 mt-1"></i>Event-Master</h6>
+      <div class="">
+        <div class="btn-panel btn-panel-msg">
+          <a href="" class="btn  send-message-btn" role="button"><i class="fa fa-gears fa-lg"></i></a>
+        </div>
+      </div>
+    </div>
+
+    <!------>
+    <div class="pl-3 pt-3 pb-3 pr-3 bg-white">
+
+
+
+      <div>
+        <div class="d-flex justify-content-between bg-primary pb-1 pt-2 pl-2 pr-2">
+          <div class="btn-panel btn-panel-conversation">
+            <h6 class="ml-1 mt-1"><i class="fa fa-address-card-o mr-1 mt-1"></i>{{eventMasterFormLabelName}}</h6>
+          </div>
+
+        </div>
+        <form [formGroup]="eventMasterForm" autocomplete="off" novalidate (ngSubmit)="createEvent(eventMasterForm.value)">
+          <div>
+            <div class="form-group-style">
+
+
+              <div class="row">
+
+                <div class="col-md-6">
+                  <label for="staticEmail" class="col-form-label font-weight-bold">Event ID</label>
+
+                  <input type="text" readonly class="form-control-plaintext" id="eventID" value="0000000000">
+
+                </div>
+                <div class=" col-md-6">
+                  <label class="font-weight-bold">Event Name<em>*</em></label>
+                  <div class="input-group">
+                    <span class="input-group-addon"><i class="glyphicon glyphicon-grain"></i></span>
+                    <input type="text" class="form-control" formControlName="eventname" placeholder="Event Name" id="eventName" name="eventname" required>
+                  </div>
+                  <div class="input-group">
+                    <em style="color:red" *ngIf="validateControl('eventname') && hasError('eventname', 'required');else ErrorEventForBlankSpace">Event Name is required</em>
+                    <em style="color:red" *ngIf="validateControl('eventname') && hasError('eventname', 'maxlength')">Maximum allowed length is 20 characters.</em>
+                  </div>
+                </div>
+
+
+              </div>
+            </div>
+            <div class="form-group-style">
+              <div class="row">
+                <div class="col-md-6">
+                  <label class="font-weight-bold">Event Priority</label>
+                  <select name="EventPriority" id="eventPriority" class="form-control">
+                    <option value="0">False</option>
+                    <option value="1">True</option>
+                  </select>
+                </div>
+                <div class="col-md-6">
+                  <label class="font-weight-bold">Application ID</label>
+                  <div class="input-group">
+                    <span class="input-group-addon"><i class="glyphicon glyphicon-italic"></i></span>
+                    <input type="text" class="form-control" placeholder="Application ID" id="applicationID" name="url" required>
+                  </div>
+                  <div class="input-group">
+                    <em>&nbsp;</em>
+                  </div>
+                </div>
+
+
+              </div>
+            </div>
+            <div class="form-group-style">
+              <div class="row">
+
+                <div class="col-md-6">
+                  <label class="font-weight-bold">BU ID</label>
+                  <select name="eventBUID" id="eventBUID" class="form-control">
+                    <option value="0">Select</option>
+                    <option value="1">BUID First</option>
+                    <option value="1">BUID Second</option>
+                  </select>
+                </div>
+
+                <div class="col-md-6">
+                  <label class="font-weight-bold">Sub BU ID</label>
+                  <select name="eventSubBUID" id="eventSubBUID" class="form-control">
+                    <option value="0">Select</option>
+                    <option value="1">SubBUID First</option>
+                    <option value="1">SubBUID Second</option>
+                  </select>
+                  <div class="input-group">
+                    <em>&nbsp;</em>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+            <div class="form-group-style">
+              <div class="row">
+                <div class="col-md-6">
+                  <label class="font-weight-bold">Channel ID's</label>
+                  <div class="input-group">
+                    <span class="input-group-addon"><i class="glyphicon glyphicon-italic"></i></span>
+                    <input type="text" class="form-control" placeholder="Channel ID's" id="eventChannelID" name="contnamedt" required>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <label class="font-weight-bold">Template ID</label>
+                  <div class="input-group">
+                    <span class="input-group-addon"><i class="glyphicon glyphicon-italic"></i></span>
+                    <input type="text" class="form-control" placeholder="Template ID" id="eventTemplateID" name="priority" required>
+                  </div>
+                </div>
+
+
+              </div>
+            </div>
+            <div class="btn-panel btn-panel-msg mr-1" style="margin-top:2%;">
+              <button type="submit" class="btn btn-sm btn-success mr-1"><span class="glyphicon glyphicon-floppy-save"></span> Create</button>
+              <button class="btn btn-sm btn-warning mr-1"><span class="glyphicon glyphicon-refresh"></span> Reset</button>
+              <button class="btn btn-sm btn-danger mr-1" [routerLink]="['/business/event-master']"><span class="glyphicon glyphicon-remove"></span> Cancel</button>
+            </div>
+          </div>
+          
+          <ng-template #ErrorEventForBlankSpace>&nbsp;</ng-template>
+        </form>
+</div>
+
+
+
+
+      <!------------>
+    </div>
+  </div>
+
+
+  <!--[(ngModel)]="srcProvider.ServiceProviderName"  #srcProviderName="ngModel"-->
