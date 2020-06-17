@@ -66,59 +66,59 @@ const MENUITEMS: Menu[] = [
 
     ]
   },
-  {
-    state: 'ConfigurationSettings',
-    name: 'Configuration Settings',
-    type: 'sub',
-    icon: 'settings',
-    children: [
-      {
-        state: 'service-provider',
-        name: 'Service Provider',
-        type: 'link',
-        //grandchild:
-        //  [
-        //    { state: 'serviceprovideradd', name: 'Service Provider Add', type: 'link' },
-        //    { state: 'serviceprovideredit', name: 'Service Provider Edit', type: 'link' }
-        //  ]
+  // {
+  //   state: 'ConfigurationSettings',
+  //   name: 'Configuration Settings',
+  //   type: 'sub',
+  //   icon: 'settings',
+  //   children: [
+  //     {
+  //       state: 'service-provider',
+  //       name: 'Service Provider',
+  //       type: 'link',
+  //       //grandchild:
+  //       //  [
+  //       //    { state: 'serviceprovideradd', name: 'Service Provider Add', type: 'link' },
+  //       //    { state: 'serviceprovideredit', name: 'Service Provider Edit', type: 'link' }
+  //       //  ]
 
-      },
-      { state: 'channelmgmt', name: 'Channel Management' },
-      { state: 'communication-mgmt', name: 'Communication Management' }
-    ]
-  },
-  {
-    state: 'reports',
-    name: 'Reports',
-    type: 'sub',
-    icon: 'receipt',
-    children: [
-      { state: 'communication-tracking', name: 'Communication Tracking' },
-      { state: 'commmis', name: 'Communication MIS' }
-    ]
-  },
-  {
-    state: 'rolesnright',
-    name: 'Roles & Rights',
-    type: 'sub',
-    icon: 'check',
-    children: [
-      { state: 'userprofile', name: 'User Profile', type: 'link' },
-      { state: 'hierarchymgmt', name: 'Hierarchy Management', type: 'link' }
-    ]
-  },
-  {
-    state: 'security',
-    name: 'Security',
-    type: 'sub',
-    icon: 'security',
-    children: [
-      { state: 'User', name: 'User', type: 'link', icon: 'person' },
-      { state: 'User', name: 'Roles', type: 'link', icon: 'person' },
-      { state: 'User', name: 'Access Rights', type: 'link', icon: 'person' },
-      { state: 'User', name: 'Hierarchy', type: 'link', icon: 'person' }
-    ]
-  }
+  //     },
+  //     { state: 'channelmgmt', name: 'Channel Management' },
+  //     { state: 'communication-mgmt', name: 'Communication Management' }
+  //   ]
+  // },
+  // {
+  //   state: 'reports',
+  //   name: 'Reports',
+  //   type: 'sub',
+  //   icon: 'receipt',
+  //   children: [
+  //     { state: 'communication-tracking', name: 'Communication Tracking' },
+  //     { state: 'commmis', name: 'Communication MIS' }
+  //   ]
+  // },
+  // {
+  //   state: 'rolesnright',
+  //   name: 'Roles & Rights',
+  //   type: 'sub',
+  //   icon: 'check',
+  //   children: [
+  //     { state: 'userprofile', name: 'User Profile', type: 'link' },
+  //     { state: 'hierarchymgmt', name: 'Hierarchy Management', type: 'link' }
+  //   ]
+  // },
+  // {
+  //   state: 'security',
+  //   name: 'Security',
+  //   type: 'sub',
+  //   icon: 'security',
+  //   children: [
+  //     { state: 'User', name: 'User', type: 'link', icon: 'person' },
+  //     { state: 'User', name: 'Roles', type: 'link', icon: 'person' },
+  //     { state: 'User', name: 'Access Rights', type: 'link', icon: 'person' },
+  //     { state: 'User', name: 'Hierarchy', type: 'link', icon: 'person' }
+  //   ]
+  // }
   //,
   //{
   //  state: 'fetch-data',
