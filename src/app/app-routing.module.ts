@@ -33,6 +33,11 @@ export const AppRoutes: Routes = [
         },
         {
           path: 'business',
+          loadChildren: './about-us/about-us.module#AboutUsModule'
+        },
+
+        {
+          path: 'business',
           loadChildren: './template-master/template-master.module#TemplateMasterModule'
         },
         {

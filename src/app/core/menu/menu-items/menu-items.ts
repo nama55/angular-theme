@@ -49,6 +49,7 @@ const MENUITEMS: Menu[] = [
     type: 'sub',
     icon: 'business',
     children: [
+      { state: 'about-us', name:'About Us'},
       { state: 'userdashboard', name:'User Dashboard'},
       { state: 'template-master', name: 'Template Master' },
       { state: 'event-master', name: 'Event Master' },
